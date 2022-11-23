@@ -1,11 +1,13 @@
 
 # Neutron Testnet manual guide
 
-![neutron](https://user-images.githubusercontent.com/44331529/201018597-cccdc09f-0f52-4cf9-af71-4d42ddf53e35.png)
+![neutron](https://user-images.githubusercontent.com/103267218/203071188-1ba0021c-b3a8-4bf7-9d11-f2b28e67063e.png)
 
 [WebSite](https://neutron.org/)
 =
 [EXPLORER](https://testnet-explorer.konsortech.xyz/neutron)
+=
+[Setup Server on GOOGLE CLOUD](https://neutron.org/)
 =
 
 - **Minimum hardware requirements**:
@@ -141,29 +143,6 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.neutrond/config/config.toml
 neutrond tendermint unsafe-reset-all --home /root/.neutrond --keep-addr-book
 ```
-# SnapShot 15.11.22 (0.1 GB) height 129142
-```python
-# install the node as standard, but do not launch. Then we delete the .data directory and create an empty directory
-sudo systemctl stop neutrond
-cp $HOME/.neutrond/data/priv_validator_state.json $HOME/.neutrond/priv_validator_state.json.backup
-rm -rf $HOME/.neutrond/data/
-mkdir $HOME/.neutrond/data/
-
-# download archive
-cd $HOME
-wget http://neutron.snapshot.stavr.tech:4000/neutronddata.tar.gz
-
-# unpack the archive
-tar -C $HOME/ -zxvf neutronddata.tar.gz --strip-components 1
-
-# after unpacking, run the node
-# don't forget to delete the archive to save space
-cd $HOME
-rm neutronddata.tar.gz
-mv $HOME/.neutrond/priv_validator_state.json.backup $HOME/.neutrond/data/priv_validator_state.json
-sudo systemctl restart neutrond && sudo journalctl -u neutrond -f -o cat
-```
-
 
 
 ## Start
