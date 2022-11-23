@@ -156,7 +156,7 @@ sudo systemctl restart neutrond && sudo journalctl -u neutrond -f -o cat
 ```bash
 neutrond tx staking create-validator \
   --amount 1000000untrn \
-  --from <walletName> \
+  --from <<walletName>> \
   --commission-max-change-rate "0.1" \
   --commission-max-rate "0.2" \
   --commission-rate "0.1" \
