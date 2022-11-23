@@ -15,12 +15,8 @@
 | Testnet   |   4|  8GB | 150GB    |
 
 
-# 1) Auto_install script
-```bash
-SOOON
-```
 
-# 2) Manual installation
+# 1) Manual installation
 
 ### Preparing the server
 
