@@ -1,5 +1,5 @@
 
-# [Neutron](https://github.com/konsortech/Node/blob/main/Neutron/Tendermint_KMS/readme.md) Create Validator High Availability with Tendermint KMS
+# [Neutron](https://neutron.org/) Create Validator High Availability with Tendermint KMS
 
 [Terndermint KMS](https://github.com/iqlusioninc/tmkms#about) is Key Management System for Tendermint applications such as Cosmos Validators.
 This repository contains tmkms, a key management service intended to be deployed in conjunction with Tendermint applications (ideally on separate physical hosts) which provides the following:
