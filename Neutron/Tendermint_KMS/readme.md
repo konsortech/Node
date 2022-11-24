@@ -109,7 +109,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which tmkms) start $HOME/tmkms/config/tmkms.toml
+ExecStart=$(which tmkms) start -c $HOME/tmkms/config/tmkms.toml
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
