@@ -52,7 +52,7 @@ make install
 
 
 ```bash
-neutrond init STAVRguide --chain-id quark-1
+neutrond init $NODENAME --chain-id quark-1
 
 ```    
 
