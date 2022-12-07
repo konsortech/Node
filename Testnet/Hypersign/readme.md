@@ -48,12 +48,6 @@ cd hid-node
 make install
 ```
 
-## Config app
-```
-hid-noded config chain-id $HYPERSIGN_CHAIN_ID
-hid-noded config keyring-backend test
-```
-
 ## Init app
 ```
 hid-noded init $NODENAME --chain-id $HYPERSIGN_CHAIN_ID
