@@ -57,7 +57,7 @@ ollod config keyring-backend test
 
 ## Init app
 ```
-hid-noded init $NODENAME --chain-id $OLLO_CHAIN_ID
+ollod init $NODENAME --chain-id $OLLO_CHAIN_ID
 ```
 
 ### Download configuration
@@ -75,7 +75,7 @@ sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persisten
 ## Disable indexing
 ```
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.hid-node/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.ollo/config/config.toml
 ```
 
 ## Config pruning
