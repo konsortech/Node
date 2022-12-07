@@ -1,3 +1,5 @@
+## State Sync
+```
 sudo systemctl stop bcnad
 
 cp $HOME/.bcna/data/priv_validator_state.json $HOME/.bcna/priv_validator_state.json.backup
@@ -23,3 +25,4 @@ mv $HOME/.bcna/priv_validator_state.json.backup $HOME/.bcna/data/priv_validator_
 
 sudo systemctl restart bcnad
 sudo journalctl -u bcnad -f --no-hostname -o cat
+```
