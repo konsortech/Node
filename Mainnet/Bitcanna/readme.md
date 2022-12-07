@@ -1,4 +1,4 @@
-### How To Install Full Node Uptick Testnet
+### How To Install Full Node Bitcanna Mainnet
 
 ## Setting up vars
 Your Nodename (validator) that will shows in explorer
@@ -51,12 +51,12 @@ make install
 
 ## Config app
 ```
-uptickd config chain-id $BITCANNA_CHAIN_ID
+bcnad config chain-id $BITCANNA_CHAIN_ID
 ```
 
 ## Init app
 ```
-uptickd init $NODENAME --chain-id $BITCANNA_CHAIN_ID
+bcnad init $NODENAME --chain-id $BITCANNA_CHAIN_ID
 ```
 
 ### Download configuration
@@ -109,6 +109,6 @@ EOF
 ## Register and start service
 ```
 sudo systemctl daemon-reload
-sudo systemctl enable uptickd
-sudo systemctl restart uptickd && sudo journalctl -u uptickd -f -o cat
+sudo systemctl enable bcnad
+sudo systemctl restart bcnad && sudo journalctl -u bcnad -f -o cat
 ```
