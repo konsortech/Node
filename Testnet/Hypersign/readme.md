@@ -50,13 +50,13 @@ make install
 
 ## Config app
 ```
-uptickd config chain-id $HYPERSIGN_CHAIN_ID
-uptickd config keyring-backend test
+hid-noded config chain-id $HYPERSIGN_CHAIN_ID
+hid-noded config keyring-backend test
 ```
 
 ## Init app
 ```
-uptickd init $NODENAME --chain-id $HYPERSIGN_CHAIN_ID
+hid-noded init $NODENAME --chain-id $HYPERSIGN_CHAIN_ID
 ```
 
 ### Download configuration
