@@ -71,14 +71,8 @@ wget -O $HOME/.umee/config/addrbook.json "https://raw.githubusercontent.com/kons
 
 ### StateSync
 
-```
-https://polkachu.com/state_sync/umee
-https://theamsolutions.info/umee-services
-https://stakeangle.com/state-sync/umee
-https://book.testnet.run/umee/state-sync
-https://bitszn.com/snapshots.html
-http://umee-state-sync.cyphercore.io
-```
+[Statesync Guide](https://github.com/konsortech/Node/blob/main/Mainnet/Umee/statesync.md)
+
 
 ## Service file
 ```console
