@@ -3,7 +3,7 @@
 sudo systemctl stop ollod
 
 cp $HOME/.ollo/data/priv_validator_state.json $HOME/.ollo/priv_validator_state.json.backup
-ollo tendermint unsafe-reset-all --home $HOME/.ollo --keep-addr-book
+ollod tendermint unsafe-reset-all --home $HOME/.ollo --keep-addr-book
 
 SNAP_RPC="https://testnet-ollo-rpc.konsortech.xyz:443"
 
