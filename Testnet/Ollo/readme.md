@@ -63,7 +63,10 @@ ollod init $NODENAME --chain-id $OLLO_CHAIN_ID
 ### Download configuration
 ```
 wget -qO $HOME/.ollo/config/genesis.json "https://raw.githubusercontent.com/OllO-Station/networks/master/ollo-testnet-1/genesis.json"
+wget -qO $HOME/.ollo/config/addrbook.json "https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Ollo/addrbook.json"
 ```
+
+
 
 ## Set seeds and peers
 ```
