@@ -55,7 +55,7 @@ mande-chaind init $NODENAME --chain-id $MANDE_CHAIN_ID
 ### Download configuration
 ```
 wget -O $HOME/.mande-chain/config/genesis.json "https://raw.githubusercontent.com/mande-labs/testnet-1/main/genesis.json"
-wget -O $HOME/.mande-chain/config/addrbook.json "https://raw.githubusercontent.com/obajay/nodes-Guides/main/Mande%20Chain/addrbook.json"
+wget -O $HOME/.mande-chain/config/addrbook.json "https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Mande/addrbook.json"
 ```
 
 ## Set minimum gas price, seeds and peers
