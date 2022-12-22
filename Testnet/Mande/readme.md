@@ -74,6 +74,27 @@ indexer="null" && \
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.mande-chain/config/config.toml
 ```
 
+## Additional node performance config
+
+Increase file limit
+```
+ulimit -n 65536
+```
+
+Update ~/.mande-chain/config/config.toml
+```
+log_level = "error"
+send_rate = 20000000
+recv_rate = 20000000
+max_packet_msg_payload_size = 10240
+flush_throttle_timeout = "50ms"
+mempool.size = 10000
+create_empty_blocks = false
+indexer = "null" [If you are not running explorers using same rpc]
+persistent_peers = "ee8a1b98e931e81d32c52f0b489fa22b52778d7c@34.171.132.212:26656,6780b2648bd2eb6adca2ca92a03a25b216d4f36b@34.170.16.69:26656" [Verify]
+Delete ~/.mande-chain/config/addrbook.json [It will be generated freshly]
+```
+
 ## Config pruning
 ```
 pruning="custom" && \
