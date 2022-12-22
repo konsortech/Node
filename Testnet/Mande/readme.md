@@ -49,7 +49,7 @@ chmod 744 /usr/local/bin/mande-chaind
 
 ## Init app
 ```
-mande-chaind init $NODENAME --chain-id $HYPERSIGN_CHAIN_ID
+mande-chaind init $NODENAME --chain-id $MANDE_CHAIN_ID
 ```
 
 ### Download configuration
