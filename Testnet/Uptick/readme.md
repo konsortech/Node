@@ -27,7 +27,7 @@ sudo apt update && sudo apt upgrade -y
 
 ## Install dependencies
 ```
-sudo apt install curl build-essential git wget jq make gcc tmux net-tools ccza -y
+sudo apt install curl build-essential git wget jq make gcc tmux net-tools ccze -y
 ```
 
 ## Install go
