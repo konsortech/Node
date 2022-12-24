@@ -67,6 +67,7 @@ uptickd init $NODENAME --chain-id $UPTICK_CHAIN_ID
 ### Download configuration
 ```
 curl -o $HOME/.uptickd/config/genesis.json https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-2/genesis.json
+curl -o $HOME/.uptickd/config/addrbook.json https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Uptick/addrbook.json
 ```
 
 ## Set seeds and peers
