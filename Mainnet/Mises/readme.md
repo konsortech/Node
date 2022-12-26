@@ -62,7 +62,7 @@ misestmd init $NODENAME --chain-id $MISES_CHAIN_ID
 ### Download configuration
 ```
 curl https://e1.mises.site:443/genesis | jq .result.genesis > ~/.misestm/config/genesis.json
-curl https://github.com/konsortech/Node/blob/main/Mainnet/Lambda/addrbook.json > $HOME/.lambdavm/config/addrbook.json
+curl https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Mises/addrbook.json > $HOME/.misestm/config/addrbook.json
 ```
 
 ## Set seeds and peers
