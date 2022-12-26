@@ -4,6 +4,7 @@ sudo systemctl stop misestmd
 
 cp $HOME/.misestm/data/priv_validator_state.json $HOME/.misestm/priv_validator_state.json.backup
 misestmd unsafe-reset-all
+curl https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Mises/addrbook.json > $HOME/.misestm/config/addrbook.json
 
 SNAP_RPC="https://mainnet-mises-rpc.konsortech.xyz:443"
 
