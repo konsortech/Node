@@ -62,7 +62,7 @@ bcnad init $NODENAME --chain-id $BITCANNA_CHAIN_ID
 ### Download configuration
 ```
 curl https://raw.githubusercontent.com/BitCannaGlobal/bcna/main/genesis.json > $HOME/.bcna/config/genesis.json
-curl https://github.com/konsortech/Node/blob/main/Mainnet/Bitcanna/addrbook.json > $HOME/.bcna/config/addrbook.json
+curl https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Bitcanna/addrbook.json > $HOME/.bcna/config/addrbook.json
 ```
 
 ## Set seeds and peers
