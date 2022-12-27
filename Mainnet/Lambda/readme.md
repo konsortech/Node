@@ -62,7 +62,7 @@ lambdavm init $NODENAME --chain-id $LAMBDA_CHAIN_ID
 ```
 wget https://raw.githubusercontent.com/LambdaIM/mainnet/main/lambda_92000-1/genesis.json 
 mv genesis.json ~/.lambdavm/config/
-curl https://github.com/konsortech/Node/blob/main/Mainnet/Lambda/addrbook.json > $HOME/.lambdavm/config/addrbook.json
+curl https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Lambda/addrbook.json > $HOME/.lambdavm/config/addrbook.json
 ```
 
 ## Set seeds and peers
