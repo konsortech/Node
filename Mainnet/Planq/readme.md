@@ -63,7 +63,7 @@ planqd init $NODENAME --chain-id $PLANQ_CHAIN_ID
 ### Download configuration
 ```
 wget -qO $HOME/.planqd/config/genesis.json "https://raw.githubusercontent.com/planq-network/networks/main/mainnet/genesis.json"
-wget -O $HOME/.planqd/config/addrbook.json "https://raw.githubusercontent.com/nodexcapital/testnet/main/planq/addrbook.json"
+wget -O $HOME/.planqd/config/addrbook.json "https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Planq/addrbook.json"
 ```
 
 ## Set seeds and peers
