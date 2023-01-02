@@ -65,13 +65,6 @@ curl -o ~/.iris/config/config.toml https://raw.githubusercontent.com/irisnet/mai
 curl -o ~/.iris/config/genesis.json https://raw.githubusercontent.com/irisnet/mainnet/master/config/genesis.json
 ```
 
-## Set seeds and peers
-```
-seeds="a17d7923293203c64ba75723db4d5f28e642f469@seed-2.mainnet.irisnet.org:26656"
-peers="fdc0406afdd3acc63f74f5439e09104f663a7c1f@44.241.177.178:26656,090bcbe5302e6104821a96c4899912870db04cb9@52.11.128.123:26656,83b3f989f3ce089afdf733f8aa06e792d7e00c08@3.34.6.30:26656"
-sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.iris/config/config.toml
-```
-
 ## Disable indexing
 ```
 indexer="null"
