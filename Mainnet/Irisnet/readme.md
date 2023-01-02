@@ -71,13 +71,6 @@ indexer="null"
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.iris/config/config.toml
 ```
 
-## Config pruning
-```
-sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.iris/config/app.toml
-sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.iris/config/app.toml
-sed -i 's|pruning-interval = "0"|pruning-interval = "17"|g' $HOME/.iris/config/app.toml
-```
-
 ## Set minimum gas price
 ```
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.2uiris"|g' $HOME/.iris/config/app.toml
