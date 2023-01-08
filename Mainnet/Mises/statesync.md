@@ -24,6 +24,6 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.misestm/c
 
 mv $HOME/.misestm/priv_validator_state.json.backup $HOME/.misestm/data/priv_validator_state.json
 
-sudo systemctl restart misestm
-sudo journalctl -u misestm -f --no-hostname -o cat
+sudo systemctl restart misestmd
+sudo journalctl -u misestmd -f --no-hostname -o cat
 ```
