@@ -58,7 +58,7 @@ humansd init $NODENAME --chain-id $HUMANS_CHAIN_ID
 ### Download configuration
 ```
 wget https://snapshots.polkachu.com/testnet-genesis/humans/genesis.json -O $HOME/.humans/config/genesis.json
-wget -O $HOME/.humans/config/addrbook.json "https://raw.githubusercontent.com/obajay/nodes-Guides/main/Humans/addrbook.json"
+wget -O $HOME/.humans/config/addrbook.json "https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Humans/addrbook.json"
 ```
 
 ## Set the minimum gas price and Peers, Filter peers/ MaxPeers
