@@ -19,44 +19,42 @@ humansd keys list
 ### Save wallet info
 Add wallet and validator address into variables 
 ```
-LAMBDA_WALLET_ADDRESS=$(lambdavm keys show $WALLET -a)
-LAMBDA_VALOPER_ADDRESS=$(lambdavm keys show $WALLET --bech val -a)
-echo 'export LAMBDA_WALLET_ADDRESS='${LAMBDA_WALLET_ADDRESS} >> $HOME/.bash_profile
-echo 'export LAMBDA_VALOPER_ADDRESS='${LAMBDA_VALOPER_ADDRESS} >> $HOME/.bash_profile
+HUMANS_WALLET_ADDRESS=$(humansd keys show $WALLET -a)
+HUMANS_VALOPER_ADDRESS=$(humansd keys show $WALLET --bech val -a)
+echo 'export HUMANS_WALLET_ADDRESS='${HUMANS_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export HUMANS_VALOPER_ADDRESS='${HUMANS_VALOPER_ADDRESS} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
 ### Fund your wallet
-In order to create validator first you need to fund your wallet with buy lambd token.
+
 ```
-[N/A]
+Go to #testnet-faucet on discord channel
 ```
 
 ### Create validator
 
 check your wallet balance:
 ```
-humansd query bank balances $LAMBDA_WALLET_ADDRESS
+humansd query bank balances $HUMANS_WALLET_ADDRESS
 ```
 To create your validator run command below
 ```
 humansd tx staking create-validator \
-  --amount 20000000000000000000000ulamb \
+  --amount 1000000uheart \
   --from $WALLET \
-  --commission-max-change-rate "0.01" \
+  --commission-max-change-rate "0.1" \
   --commission-max-rate "0.2" \
   --commission-rate "0.1" \
   --min-self-delegation "1" \
-  --pubkey  $(lambda tendermint show-validator) \
+  --pubkey  $(humansd tendermint show-validator) \
   --moniker $NODENAME \
-  --chain-id $LAMBDA_CHAIN_ID
-  --gas-prices="0.025ulamb" \
-  --gas=auto \
+  --chain-id $HUMANS_CHAIN_ID
 ```
 
 ### Check your validator key
 ```
-[[ $(humansd q staking validator $LAMBDA_VALOPER_ADDRESS -oj | jq -r .consensus_pubkey.key) = $(humansd status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
+[[ $(humansd q staking validator $HUMANS_VALOPER_ADDRESS -oj | jq -r .consensus_pubkey.key) = $(humansd status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
 ```
 
 ### Get list of validators
@@ -125,38 +123,38 @@ humansd keys delete $WALLET
 
 Get wallet balance
 ```
-humansd query bank balances $LAMBDA_WALLET_ADDRESS
+humansd query bank balances $HUMANS_WALLET_ADDRESS
 ```
 
 Transfer funds
 ```
-humansd tx bank send $LAMBDA_WALLET_ADDRESS <TO_LAMBDA_WALLET_ADDRESS> 20000000000000000000000ulamb
+humansd tx bank send $HUMANS_WALLET_ADDRESS <TO_HUMANS_WALLET_ADDRESS> 1000000uheart
 ```
 
 ### Voting
 ```
-humansd tx gov vote 1 yes --from $WALLET --chain-id=$LAMBDA_CHAIN_ID
+humansd tx gov vote 1 yes --from $WALLET --chain-id=$HUMANS_CHAIN_ID
 ```
 
 ### Staking, Delegation and Rewards
 Delegate stake
 ```
-humansd tx staking delegate $LAMBDA_VALOPER_ADDRESS 20000000000000000000000ulamb --from=$WALLET --chain-id=$LAMBDA_CHAIN_ID --gas=auto
+humansd tx staking delegate $HUMANS_VALOPER_ADDRESS 1000000uheart --from=$WALLET --chain-id=$HUMANS_CHAIN_ID --gas=auto
 ```
 
 Redelegate stake from validator to another validator
 ```
-humansd tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 20000000000000000000000ulamb --from=$WALLET --chain-id=$LAMBDA_CHAIN_ID --gas=auto
+humansd tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 1000000uheart --from=$WALLET --chain-id=$HUMANS_CHAIN_ID --gas=auto
 ```
 
 Withdraw all rewards
 ```
-humansd tx distribution withdraw-all-rewards --from=$WALLET --chain-id=$LAMBDA_CHAIN_ID --gas=auto
+humansd tx distribution withdraw-all-rewards --from=$WALLET --chain-id=$HUMANS_CHAIN_ID --gas=auto
 ```
 
 Withdraw rewards with commision
 ```
-humansd tx distribution withdraw-rewards $LAMBDA_VALOPER_ADDRESS --from=$WALLET --commission --chain-id=$LAMBDA_CHAIN_ID
+humansd tx distribution withdraw-rewards $HUMANS_VALOPER_ADDRESS --from=$WALLET --commission --chain-id=$HUMANS_CHAIN_ID
 ```
 
 ### Validator management
@@ -167,7 +165,7 @@ humansd tx staking edit-validator \
   --identity=<your_keybase_id> \
   --website="<your_website>" \
   --details="<your_validator_description>" \
-  --chain-id=$LAMBDA_CHAIN_ID \
+  --chain-id=$HUMANS_CHAIN_ID \
   --from=$WALLET
 ```
 
@@ -176,6 +174,6 @@ Unjail validator
 humansd tx slashing unjail \
   --broadcast-mode=block \
   --from=$WALLET \
-  --chain-id=$LAMBDA_CHAIN_ID \
+  --chain-id=$HUMANS_CHAIN_ID \
   --gas=auto
 ```
