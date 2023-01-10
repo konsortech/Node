@@ -50,6 +50,9 @@ humansd tx staking create-validator \
   --pubkey  $(humansd tendermint show-validator) \
   --moniker $NODENAME \
   --chain-id $HUMANS_CHAIN_ID
+  --gas-prices=0.1uheart \
+  --gas-adjustment=1.5 \
+  --gas=auto \
 ```
 
 ### Check your validator key
