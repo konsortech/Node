@@ -1,4 +1,4 @@
-### How To Install Full Node Nulos Testnet
+### How To Install Full Node Nolus Testnet
 
 ## Setting up vars
 Your Nodename (validator) that will shows in explorer
@@ -12,7 +12,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export NULOS_CHAIN_ID=nolus-rila" >> $HOME/.bash_profile
+echo "export NOLUS_CHAIN_ID=nolus-rila" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -51,13 +51,13 @@ make install
 
 ## Config app
 ```
-nulosd config chain-id $NULOS_CHAIN_ID
+nolusd config chain-id $NOLUS_CHAIN_ID
 nolusd config keyring-backend test
 ```
 
 ## Init app
 ```
-nulosd init $NODENAME --chain-id $NULOS_CHAIN_ID
+nolusd init $NODENAME --chain-id $NOLUS_CHAIN_ID
 ```
 
 ### Download configuration
@@ -77,14 +77,14 @@ sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_p
 ## Disable indexing
 ```
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.nulos/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.nolus/config/config.toml
 ```
 
 ## Config pruning
 ```
-sed -i 's|pruning = "custom"|pruning = "custom"|g' $HOME/.nulos/config/app.toml
-sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.nulos/config/app.toml
-sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.nulos/config/app.toml
+sed -i 's|pruning = "custom"|pruning = "custom"|g' $HOME/.nolus/config/app.toml
+sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.nolus/config/app.toml
+sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.nolus/config/app.toml
 ```
 
 ## Set minimum gas price
@@ -112,6 +112,6 @@ EOF
 ## Register and start service
 ```
 sudo systemctl daemon-reload
-sudo systemctl enable nulosd
-sudo systemctl restart nulosd && sudo journalctl -u nulosd -f -o cat
+sudo systemctl enable nolusd
+sudo systemctl restart nolusd && sudo journalctl -u nolusd -f -o cat
 ```
