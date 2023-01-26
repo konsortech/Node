@@ -1,4 +1,4 @@
-## How To create or provide Snapshot
+## How To Create or Provide Public Snapshot
 
 ```
 sudo apt install lz4
@@ -9,7 +9,7 @@ sudo systemctl start planqd
 ```
 
 
-## Config Your web server
+## Config Your Web Server
 
 ```
 server {
@@ -44,4 +44,8 @@ server {
                 root /var/www/snapshot/;
                 autoindex on;
         }
+```
+## Restart Your Web Server
+```
+service nginx restart
 ```
