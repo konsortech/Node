@@ -45,7 +45,7 @@ server {
                 autoindex on;
         }
 ```
-## Restart Your Web Server
+## Restart Your Web Server Servces
 ```
 service nginx restart
 ```
