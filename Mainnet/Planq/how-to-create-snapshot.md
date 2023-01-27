@@ -11,6 +11,11 @@ sudo systemctl start planqd
 
 ## Config Your Web Server
 
+### Create Directory First
+```
+mkdir -p /var/www/snapshot/planq
+```
+
 ```
 server {
 
