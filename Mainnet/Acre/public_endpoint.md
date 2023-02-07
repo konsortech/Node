@@ -10,5 +10,5 @@ https://mainnet-acre-api.konsortech.xyz
 
 ### Peers
 ```
-N/A
+7d630b6e517598b4dc84a07c15fe328709a2705b@mainnet-acre.konsortech.xyz
 ```
