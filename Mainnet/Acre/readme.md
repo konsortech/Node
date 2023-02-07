@@ -61,6 +61,7 @@ acred  init $NODENAME --chain-id $ACRE_CHAIN_ID
 ### Download configuration
 ```
 wget https://raw.githubusercontent.com/ArableProtocol/acrechain/main/networks/mainnet/acre_9052-1/genesis.json -O $HOME/.acred/config/genesis.json
+wget https://snapshot1.konsortech.xyz/acre/addrbook.json -O $HOME/.acred/config/addrbook.json
 ```
 
 ## Set seeds and peers
