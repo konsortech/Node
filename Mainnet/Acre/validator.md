@@ -29,7 +29,7 @@ source $HOME/.bash_profile
 ### Fund your wallet
 
 ```
-https://faucet.marsprotocol.io/
+https://frontier.osmosis.zone/pool/858
 ```
 
 ### Create validator
