@@ -28,7 +28,7 @@ sudo apt install clang build-essential make
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 Press 1 and press enter
-![](![img](/images/rust.png).png)
+<img width="549" alt="image" src="https://user-images.githubusercontent.com/108992739/217498937-009aa5ed-6416-48cf-90f3-c45f4de279fa.png">
 
 * Source the environment
 ```
@@ -83,20 +83,19 @@ near login
 
 1 – Copy the link in your browser
 
-![](2023-02-08-16-09-17.png)
+<img width="1015" alt="image" src="https://user-images.githubusercontent.com/108992739/217499060-1231ad47-e6c8-4368-826d-2e808c414acc.png">
 
 2 – Grant Access to Near CLI
 
-![](![img](/images/3.png).png)
+<img width="289" alt="image" src="https://user-images.githubusercontent.com/108992739/217499192-2ca6ced9-573f-4f44-9179-7603e1cf89ea.png">
 
 3 – After Grant, you will see a page like this, go back to console
 
-![](![img](/images/4.png).png)
+<img width="768" alt="image" src="https://user-images.githubusercontent.com/108992739/217499346-0856fb11-c02f-4fac-ac67-d1a6fecfc8f4.png">
 
 4 – Enter your wallet and press Enter
 
-![](![img](/images/5.png).png)
-
+<img width="1018" alt="image" src="https://user-images.githubusercontent.com/108992739/217499436-6be18b9d-8835-406b-a500-b88fa675eaec.png">
 #### Step 4 – Initialize & Start the Node
 * From nearcore folder initialize NEAR:
 ```
@@ -279,7 +278,7 @@ near call <full_pool_id> update_reward_fee_fraction '{"reward_fee_fraction": {"n
 
 You will see something like this:
 
-![](![img](/images/create_pool_result.png).png)
+<img width="1009" alt="image" src="https://user-images.githubusercontent.com/108992739/217499603-24ed39c7-4e30-4028-824e-8f21523ade16.png">
 
 If there is a “True” at the End. Your pool is created.
 
