@@ -1,4 +1,9 @@
-# NEAR Validator Mainnet Guide🚀
+# NEAR Validator Mainnet Guide🚀 
+
+# How to update The node 
+```
+here
+```
 
 # Definitions
 
