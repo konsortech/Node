@@ -1,4 +1,9 @@
-# NEAR Validator Mainnet Guide🚀
+# NEAR Validator Mainnet Guide🚀 
+
+# How to update The node 
+```
+https://github.com/pinrocks/Node-1/blob/a2afff602c99b4f4f93b2f7ca0b94068d53d4209/Mainnet/NEAR/update.md#L2
+```
 
 # Definitions
 
