@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="a3b8955aa523285d0aed51c7bfaf19eb20264ef5@mainnet-planq.konsortech.xyz:26656"
+peers="a3b8955aa523285d0aed51c7bfaf19eb20264ef5@mainnet-planq.konsortech.xyz:10656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.planqd/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
