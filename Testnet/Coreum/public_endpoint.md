@@ -1,6 +1,6 @@
 ### RPC
 ```
-https://coreum.api.konsortech.xyz/
+https://coreum.rpc.konsortech.xyz/
 ```
 
 ### GRPC
@@ -11,7 +11,7 @@ https://coreum.grpc.konsortech.xyz/
 
 ### API
 ```
-https://coreum.rpc.konsortech.xyz/
+https://coreum.api.konsortech.xyz/
 ```
 
 ### Peers
