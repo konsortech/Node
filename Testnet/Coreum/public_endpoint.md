@@ -6,7 +6,6 @@ https://coreum.rpc.konsortech.xyz/
 ### GRPC
 ```
 https://coreum.grpc.konsortech.xyz/
-
 ```
 
 ### API
