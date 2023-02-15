@@ -60,7 +60,7 @@ bcnad config chain-id $BLUZELLE_CHAIN_ID
 
 ## Init app
 ```
-bcnad init $NODENAME --chain-id $BITCANNA_CHAIN_ID
+bcnad init $NODENAME --chain-id $BLUZELLE_CHAIN_ID
 ```
 
 ### Download configuration
