@@ -20,7 +20,7 @@ https://github.com/near/nearcore/releases
 ```
 ```
 git fetch 
-git checkout 1.30.1
+git checkout 1.31.1
 make release
 sudo systemctl start neard && journalctl -n 100 -f -u neard | ccze -A
 ```
