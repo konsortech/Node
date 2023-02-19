@@ -42,6 +42,7 @@ fi
 
 ## Download and build binaries
 ```
+cd $HOME
 git clone https://github.com/ArableProtocol/acrechain.git
 cd acrechain
 git checkout v1.1.1
