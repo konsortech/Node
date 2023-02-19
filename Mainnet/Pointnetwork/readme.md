@@ -56,7 +56,7 @@ pointd config chain-id $POINT_CHAIN_ID
 
 ## Init app
 ```
-pointdd init $NODENAME --chain-id $POINT_CHAIN_ID
+pointd init $NODENAME --chain-id $POINT_CHAIN_ID
 ```
 
 ### Download configuration
