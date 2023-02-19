@@ -55,12 +55,12 @@ ignite chain serve -f -v
 
 ## Config app
 ```
-bcnad config chain-id $BLUZELLE_CHAIN_ID
+curiumd config chain-id $BLUZELLE_CHAIN_ID
 ```
 
 ## Init app
 ```
-bcnad init $NODENAME --chain-id $BLUZELLE_CHAIN_ID
+curiumd init $NODENAME --chain-id $BLUZELLE_CHAIN_ID
 ```
 
 ### Download configuration
