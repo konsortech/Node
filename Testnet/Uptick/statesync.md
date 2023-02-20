@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="d5bad0f321d477eb4bb01474db90ebb1dbc03bc4@testnet-uptick.konsortech.xyz:26656"
+peers="d5bad0f321d477eb4bb01474db90ebb1dbc03bc4@testnet-uptick.konsortech.xyz:10656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.uptickd/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
