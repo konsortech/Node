@@ -1,4 +1,4 @@
 # Automatic upgrade 
 ```
-wget -O upgrade.sh https://github.com/konsortech/Node/blob/main/Testnet/Uptick/upgrade/upgrade.sh && chmod +x upgrade.sh && ./upgrade.sh
+wget -O upgrade.sh https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Uptick/upgrade/upgrade.sh && chmod +x upgrade.sh && ./upgrade.sh
 ```
