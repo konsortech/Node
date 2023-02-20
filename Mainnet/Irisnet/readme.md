@@ -80,7 +80,7 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.2uiris"|g' $HOME/.iri
 ```
 sudo tee /etc/systemd/system/iris.service > /dev/null << EOF
 [Unit]
-Description=Bitcanna Node
+Description=Iris Node
 After=network-online.target
 [Service]
 User=$USER
