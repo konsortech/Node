@@ -1,11 +1,11 @@
 ### RPC
 ```
-https://testnet-8ball-rpc.konsortech.xyz
+https://mainnet-8ball-rpc.konsortech.xyz
 ```
 
 ### API
 ```
-https://testnet-8ball-api.konsortech.xyz
+https://mainnet-8ball-api.konsortech.xyz
 ```
 
 ### Peers
