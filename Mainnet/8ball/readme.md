@@ -74,8 +74,8 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${E
 ### Download configuration
 ```
 cd $HOME
-curl -Ls https://github.com/konsortech/Node/blob/main/Mainnet/8ball/genesis.json > $HOME/.8ball/config/genesis.json
-curl -Ls https://github.com/konsortech/Node/blob/main/Mainnet/8ball/addrbook.json > $HOME/.8ball/config/addrbook.json
+curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/8ball/genesis.json > $HOME/.8ball/config/genesis.json
+curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/8ball/addrbook.json > $HOME/.8ball/config/addrbook.json
 ```
 
 ## Set seeds and peers
