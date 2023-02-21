@@ -1,4 +1,4 @@
-### How To Install Full Node Andromeda Testnet
+### How To Install Full Node 8ball MAINNET
 
 
 
