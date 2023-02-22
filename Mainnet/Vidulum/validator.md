@@ -50,7 +50,10 @@ vidulumd tx staking create-validator \
   --min-self-delegation "1" \
   --pubkey  $(vidulumd tendermint show-validator) \
   --moniker $NODENAME \
-  --chain-id $VIDULUM_CHAIN_ID
+  --chain-id $VIDULUM_CHAIN_ID \
+  --gas auto \
+  --gas-adjustment=1.2 \
+  --fees 200000uvdl 
 ```
 
 ### Check your validator key
