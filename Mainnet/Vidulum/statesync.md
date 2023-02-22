@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="7d630b6e517598b4dc84a07c15fe328709a2705b@mainnet-vidulum.konsortech.xyz:20656"
+peers="8c711d83224dc87cc516c92697f9124518fee542@mainnet-vidulum.konsortech.xyz:20656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.vidulum/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
