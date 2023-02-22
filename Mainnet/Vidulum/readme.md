@@ -61,7 +61,7 @@ vidulumd  init $NODENAME --chain-id $VIDULUM_CHAIN_ID
 ### Download configuration
 ```
 wget https://raw.githubusercontent.com/vidulum/mainnet/main/genesis.json -O ${HOME}/.vidulum/config/genesis.json
-wget https://snapshot1.konsortech.xyz/acre/addrbook.json -O $HOME/.vidulum/config/addrbook.json
+wget https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Vidulum/addrbook.json -O $HOME/.vidulum/config/addrbook.json
 ```
 
 ## Set seeds and peers
