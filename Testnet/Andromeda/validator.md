@@ -50,7 +50,7 @@ andromedad tx staking create-validator \
   --min-self-delegation "1" \
   --pubkey  $(andromedad tendermint show-validator) \
   --moniker $NODENAME \
-  --chain-id $AURA_CHAIN_ID
+  --chain-id $ANDROMEDA_CHAIN_ID
 ```
 
 ### Check your validator key
@@ -134,28 +134,28 @@ andromedad tx bank send $ANDROMEDA_WALLET_ADDRESS <TO_ANDROMEDA_WALLET_ADDRESS> 
 
 ### Voting
 ```
-andromedad tx gov vote 1 yes --from $WALLET --chain-id=$AURA_CHAIN_ID
+andromedad tx gov vote 1 yes --from $WALLET --chain-id=$ANDROMEDA_CHAIN_ID
 ```
 
 ### Staking, Delegation and Rewards
 Delegate stake
 ```
-andromedad tx staking delegate $ANDROMEDA_VALOPER_ADDRESS 100000uandr --from=$WALLET --chain-id=$AURA_CHAIN_ID --gas=auto
+andromedad tx staking delegate $ANDROMEDA_VALOPER_ADDRESS 100000uandr --from=$WALLET --chain-id=$ANDROMEDA_CHAIN_ID --gas=auto
 ```
 
 Redelegate stake from validator to another validator
 ```
-andromedad tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 100000uandr --from=$WALLET --chain-id=$AURA_CHAIN_ID --gas=auto
+andromedad tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 100000uandr --from=$WALLET --chain-id=$ANDROMEDA_CHAIN_ID --gas=auto
 ```
 
 Withdraw all rewards
 ```
-andromedad tx distribution withdraw-all-rewards --from=$WALLET --chain-id=$AURA_CHAIN_ID --gas=auto
+andromedad tx distribution withdraw-all-rewards --from=$WALLET --chain-id=$ANDROMEDA_CHAIN_ID --gas=auto
 ```
 
 Withdraw rewards with commision
 ```
-andromedad tx distribution withdraw-rewards $ANDROMEDA_VALOPER_ADDRESS --from=$WALLET --commission --chain-id=$AURA_CHAIN_ID
+andromedad tx distribution withdraw-rewards $ANDROMEDA_VALOPER_ADDRESS --from=$WALLET --commission --chain-id=$ANDROMEDA_CHAIN_ID
 ```
 
 ### Validator management
@@ -166,7 +166,7 @@ andromedad tx staking edit-validator \
   --identity=<your_keybase_id> \
   --website="<your_website>" \
   --details="<your_validator_description>" \
-  --chain-id=$AURA_CHAIN_ID \
+  --chain-id=$ANDROMEDA_CHAIN_ID \
   --from=$WALLET
 ```
 
@@ -175,6 +175,6 @@ Unjail validator
 andromedad tx slashing unjail \
   --broadcast-mode=block \
   --from=$WALLET \
-  --chain-id=$AURA_CHAIN_ID \
+  --chain-id=$ANDROMEDA_CHAIN_ID \
   --gas=auto
 ```
