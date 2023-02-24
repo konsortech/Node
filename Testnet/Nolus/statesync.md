@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="5be7af510fa76c6d91a09e22b36fa2f4f84b938d@testnet-nolus.konsortech.xyz:26656"
+peers="5be7af510fa76c6d91a09e22b36fa2f4f84b938d@testnet-nolus.konsortech.xyz:17656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.nolus/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
