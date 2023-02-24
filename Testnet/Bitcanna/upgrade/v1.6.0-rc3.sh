@@ -14,7 +14,7 @@ for((;;)); do
                 tar -xvzf bcna_linux_amd64.tar.gz
                 rm -rf bcna_linux_amd64.tar.gz
                 chmod +x bcnad
-                mv bcnad $(which bcnad)
+                sudo mv bcnad $(which bcnad)
                 sudo systemctl restart bcnad && journalctl -fu bcnad -o cat
 
                 for (( timer=60; timer>0; timer-- )); do
