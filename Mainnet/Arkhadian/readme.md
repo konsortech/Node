@@ -1,4 +1,4 @@
-### How To Install Full Node Arable Protocol Mainnet
+### How To Install Full Node Arkhadian Mainnet
 
 ## Setting up vars
 Your Nodename (validator) that will shows in explorer
