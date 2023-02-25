@@ -51,30 +51,28 @@ make install
 
 ## Config app
 ```
-ARKHD config chain-id $ACRE_CHAIN_ID
+arkhd config chain-id $ARKHADIAN_CHAIN_ID
 ```
 
 ## Init app
 ```
-acred  init $NODENAME --chain-id $ACRE_CHAIN_ID
+arkhd  init $NODENAME --chain-id $ARKHADIAN_CHAIN_ID
 ```
 
 ### Download configuration
 ```
-wget https://raw.githubusercontent.com/ArableProtocol/acrechain/main/networks/mainnet/acre_9052-1/genesis.json -O $HOME/.acred/config/genesis.json
-wget https://snapshot1.konsortech.xyz/acre/addrbook.json -O $HOME/.acred/config/addrbook.json
+wget https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Arkhadian/genesis.json -O $HOME/.arkh/config/genesis.json
+wget https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Arkhadian/addrbook.json -O $HOME/.arkh/config/addrbook.json
 ```
 
 ## Set seeds and peers
 ```
-PEERS="ef28f065e24d60df275b06ae9f7fed8ba0823448@46.4.81.204:34656,e29de0ba5c6eb3cc813211887af4e92a71c54204@65.108.1.225:46656,276be584b4a8a3fd9c3ee1e09b7a447a60b201a4@116.203.29.162:26656,e2d029c95a3476a23bad36f98b316b6d04b26001@49.12.33.189:36656,1264ee73a2f40a16c2cbd80c1a824aad7cb082e4@149.102.146.252:26656,dbe9c383a709881f6431242de2d805d6f0f60c9e@65.109.52.156:7656,d01fb8d008cb5f194bc27c054e0246c4357256b3@31.7.196.72:26656,91c0b06f0539348a412e637ebb8208a1acdb71a9@178.162.165.193:21095,bac90a590452337700e0033315e96430d19a3ffa@23.106.238.167:26656"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.acred/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"808f01d4a7507bf7478027a08d95c575e1b5fa3c@asc-dataseed.arkhadian.com:26656\"|" $HOME/.arkh/config/config.toml
 ```
 
-## Disable indexing
+## Set minimum gas price
 ```
-indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.acred/config/config.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.025arkh\"/" $HOME/.arkh/config/app.toml
 ```
 
 ## Config pruning
@@ -82,25 +80,27 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.acred/config/config.t
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
-pruning_interval="19"
-sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.acred/config/app.toml
-sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.acred/config/app.toml
-sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.acred/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.acred/config/app.toml
+pruning_interval="10"
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.arkh/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.arkh/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.arkh/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.arkh/config/app.toml
 ```
 
 ## Create service
 ```
-sudo tee /etc/systemd/system/acred.service > /dev/null << EOF
+sudo tee /etc/systemd/system/arkh.service > /dev/null << EOF
 [Unit]
-Description=Acre Node
+Description=Arkh Node
 After=network-online.target
+
 [Service]
-User=$USER
-ExecStart=$(which acred) start
+User=root
+ExecStart=/usr/bin/arkh start --home /root/.arkh
 Restart=on-failure
-RestartSec=10
-LimitNOFILE=10000
+RestartSec=3
+LimitNOFILE=65535
+
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -109,6 +109,6 @@ EOF
 ## Register and start service
 ```
 sudo systemctl daemon-reload
-sudo systemctl enable acred
-sudo systemctl restart acred && sudo journalctl -u acred -f -o cat
+sudo systemctl enable arkh
+sudo systemctl restart arkh && sudo journalctl -u arkh -f -o cat
 ```
