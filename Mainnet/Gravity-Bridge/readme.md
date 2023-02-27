@@ -91,14 +91,14 @@ sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ugraviton\"/" $HOM
 
 ## Create service
 ```
-sudo tee /etc/systemd/system/gravityd.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/gravity.service > /dev/null <<EOF
 [Unit]
 Description=gravity
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which gravityd) start --home $HOME/.gravity
+ExecStart=$(which gravity) start --home $HOME/.gravity
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
