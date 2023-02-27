@@ -51,11 +51,6 @@ chmod +x *
 sudo mv * /usr/bin/
 ```
 
-## Config app
-```
-gravity config chain-id $GRAVITY_CHAIN_ID
-```
-
 ## Init app
 ```
 gravity init $NODENAME --chain-id $GRAVITY_CHAIN_ID
