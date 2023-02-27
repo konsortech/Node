@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="485ddd819bb13d4c1eb21e0aa46810e3c1f9d7b1@mainnet-bluzelle.konsortech.xyz:26656"
+peers="485ddd819bb13d4c1eb21e0aa46810e3c1f9d7b1@mainnet-bluzelle.konsortech.xyz:16656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.curium/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
