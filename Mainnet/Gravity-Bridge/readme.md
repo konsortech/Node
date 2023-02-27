@@ -43,10 +43,12 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-git clone https://github.com/Gravity-Bridge/Gravity-Bridge gravity
-cd gravity
-git checkout v1.8.1
-make install
+mkdir gravity-bin && cd gravity-bin
+wget https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.8.1/gravity-linux-amd64
+mv gravity-linux-amd64 gravity
+wget https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.8.1/gbt
+chmod +x *
+sudo mv * /usr/bin/
 ```
 
 ## Config app
