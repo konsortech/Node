@@ -3,7 +3,7 @@
 sudo systemctl stop curiumd
 
 cp $HOME/.curium/data/priv_validator_state.json $HOME/.curium/priv_validator_state.json.backup
-curiumd tendermint unsafe-reset-all --home $HOME/.curium --keep-addr-book
+curiumd tendermint unsafe-reset-all --home $HOME/.curium
 
 SNAP_RPC="https://mainnet-bluzelle-rpc.konsortech.xyz:443"
 
