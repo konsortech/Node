@@ -59,8 +59,8 @@ gravity init $NODENAME --chain-id $GRAVITY_CHAIN_ID
 ### Download configuration
 ```
 wget https://raw.githubusercontent.com/Gravity-Bridge/gravity-docs/main/genesis.json
-cp genesis.json $HOME/.gravity/config/genesis.json
-wget -O "$HOME/addrbook.json" https://snapshots1.polkachu.com/addrbook/gravity/addrbook.json
+mv genesis.json $HOME/.gravity/config/genesis.json
+wget -O "$HOME/addrbook.json" https://snapshots.polkachu.com/addrbook/gravity/addrbook.json
 mv "$HOME/addrbook.json" ~/.gravity/config
 ```
 
