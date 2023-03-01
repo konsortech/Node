@@ -1,14 +1,14 @@
 ### RPC
 ```
-https://mainnet-8ball-rpc.konsortech.xyz
+https://mainnet-odin-rpc.konsortech.xyz
 ```
 
 ### API
 ```
-https://mainnet-8ball-api.konsortech.xyz
+https://mainnet-odin-api.konsortech.xyz
 ```
 
 ### Peers
 ```
-b6a030993f185fe2c224ecdebc379de07fe4d2c1@testnet-8ball.konsortech.xyz:18656
+5a048cab1d183de5c465c56b29a16fd93a8bf9bd@mainnet-odin.konsortech.xyz:18656
 ```

@@ -1,4 +1,4 @@
-### How To Install Full Node 8ball MAINNET
+### How To Install Full Node odind MAINNET
 
 
 
@@ -6,7 +6,7 @@
 Your Nodename (validator) that will shows in explorer
 ```
 NODENAME=<Your_Nodename_Moniker>
-EIGHTBALL_PORT=18
+ODIN_PORT=23
 ```
 
 Save variables to system
@@ -15,8 +15,8 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export EIGHTBALL_CHAIN_ID=eightball-1" >> $HOME/.bash_profile
-echo "export EIGHTBALL_PORT=${EIGHTBALL_PORT}" >> $HOME/.bash_profile
+echo "export ODIN_CHAIN_ID=odin-mainnet-freya" >> $HOME/.bash_profile
+echo "export ODIN_PORT=${ODIN_PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -47,47 +47,47 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-git clone https://github.com/sxlmnwb/8ball.git
-cd 8ball
-git checkout v0.34.24
-go build -o 8ball ./cmd/eightballd
-sudo mv 8ball /usr/bin/
+git clone https://github.com/ODIN-PROTOCOL/odin-core.git
+cd odin-core
+git fetch --tags
+git checkout v0.6.2
+make all
 ```
 
 ## Config app
 ```
-8ball config chain-id $EIGHTBALL_CHAIN_ID
-8ball config keyring-backend test
-8ball config node tcp://localhost:18657
+odind config chain-id $ODIN_CHAIN_ID
+odind config keyring-backend file
+odind config node tcp://localhost:23657
 ```
 ## set custom ports
 ```
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${EIGHTBALL_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${EIGHTBALL_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${EIGHTBALL_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${EIGHTBALL_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${EIGHTBALL_PORT}660\"%" $HOME/.8ball/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${EIGHTBALL_PORT}317\"%; s%^address = \":8080\"%address = \":${EIGHTBALL_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${EIGHTBALL_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${EIGHTBALL_PORT}091\"%" $HOME/.8ball/config/app.toml
+sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${ODIN_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${ODIN_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${ODIN_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${ODIN_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${ODIN_PORT}660\"%" $HOME/.odin/config/config.toml
+sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${ODIN_PORT}317\"%; s%^address = \":8080\"%address = \":${ODIN_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${ODIN_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${ODIN_PORT}091\"%" $HOME/.odin/config/app.toml
 ```
 
 ## Init app
 ```
-8ball init $NODENAME --chain-id $EIGHTBALL_CHAIN_ID
+odind init $NODENAME --chain-id $ODIN_CHAIN_ID
 ```
 
 ### Download configuration
 ```
 cd $HOME
-curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/8ball/genesis.json > $HOME/.8ball/config/genesis.json
-curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/8ball/addrbook.json > $HOME/.8ball/config/addrbook.json
+curl https://raw.githubusercontent.com/ODIN-PROTOCOL/networks/master/mainnets/odin-mainnet-freya/genesis.json > ~/.odin/config/genesis.json
+wget -O $HOME/.odin/config/addrbook.json https://api-minio-nord.imperator.co/addrbook/odin/addrbook.json --inet4-only
 ```
 
 ## Set seeds and peers
 ```
-sed -i -e "s|^seeds *=.*|seeds = \"fca96d0a1d7357afb226a49c4c7d9126118c37e9@one.8ball.info:26656,aa918e17c8066cd3b031f490f0019c1a95afe7e3@two.8ball.info:26656,98b49fea92b266ed8cfb0154028c79f81d16a825@three.8ball.info:26656\"|" $HOME/.8ball/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"9d16b1ce74a34b869d69ad5fe34eaca614a36ecd@35.241.238.207:26656,02e905f49e1b869f55ad010979931b542302a9e6@35.241.221.154:26656,4847c79f1601d24d3605278a0183d416a99aa093@34.140.252.7:26656,0165cd0d60549a37abb00b6acc8227a54609c648@34.79.179.216:26656\"|" $HOME/.odin/config/config.toml
 
 ```
 
 ## Disable indexing
 ```
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.8ball/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.odin/config/config.toml
 ```
 
 ## Config pruning
@@ -96,28 +96,28 @@ pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
 pruning_interval="50"
-sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.8ball/config/app.toml
-sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.8ball/config/app.toml
-sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.8ball/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.8ball/config/app.toml
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.odin/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.odin/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.odin/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.odin/config/app.toml
 ```
 
 ## Set minimum gas price
 ```
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025uebl\"|" $HOME/.8ball/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0125loki\"|" $HOME/.odin/config/app.toml
 
 ```
 
 ## Create service
 ```
-sudo tee /etc/systemd/system/8ball.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/odind.service > /dev/null <<EOF
 [Unit]
-Description=eightball
+Description=odin
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which 8ball) start --home $HOME/.8ball
+ExecStart=$(which odind) start --home $HOME/.odin
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
@@ -130,6 +130,6 @@ EOF
 ## Register and start service
 ```
 sudo systemctl daemon-reload
-sudo systemctl enable 8ball
-sudo systemctl restart 8ball && sudo journalctl -u 8ball -f -o cat
+sudo systemctl enable odind
+sudo systemctl restart odind && sudo journalctl -u odind -f -o cat
 ```
