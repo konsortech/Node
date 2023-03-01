@@ -5,7 +5,7 @@ sudo systemctl stop echelond
 cp $HOME/.echelond/data/priv_validator_state.json $HOME/.echelond/priv_validator_state.json.backup
 echelond tendermint unsafe-reset-all --home $HOME/.echelond --keep-addr-book
 
-SNAP_RPC="https://rpc.eu.ech.world:443"
+SNAP_RPC="https://mainnet-echelon-rpc.konsortech.xyz:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="ab8febad726c213fac69361c8fd47adc3f302e64@38.242.143.4:26656"
+peers="333f8e058a9294555b531b8ed66c2c7703f226a1@mainnet-echelon.konsortech.xyz:24656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.echelond/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
