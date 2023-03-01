@@ -10,5 +10,5 @@ https://mainnet-echelon-api.konsortech.xyz
 
 ### Peers
 ```
-5a048cab1d183de5c465c56b29a16fd93a8bf9bd@mainnet-echelon.konsortech.xyz:18656
+333f8e058a9294555b531b8ed66c2c7703f226a1@mainnet-echelon.konsortech.xyz:24656
 ```
