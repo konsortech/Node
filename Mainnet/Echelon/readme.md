@@ -93,7 +93,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.echelond/config/confi
 ```
 pruning="custom"
 pruning_keep_recent="100"
-pruning_keep_every="2000"
+pruning_keep_every="0"
 pruning_interval="50"
 sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.echelond/config/app.toml
 sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.echelond/config/app.toml
