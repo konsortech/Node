@@ -44,7 +44,6 @@ echelond query bank balances $ECHELON_WALLET_ADDRESS
 To create your validator run command below
 ```
 echelond tx staking create-validator \
-echelond tx staking create-validator \
   --from $WALLET \
   --amount="1000000uechelon" \
   --commission-max-change-rate "0.1" \
