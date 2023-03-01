@@ -78,17 +78,17 @@ journalctl -fu echelond -o cat
 
 Start service
 ```
-sudo systemctl start 8ball
+sudo systemctl start echelon
 ```
 
 Stop service
 ```
-sudo systemctl stop 8ball
+sudo systemctl stop echelon
 ```
 
 Restart service
 ```
-sudo systemctl restart 8ball
+sudo systemctl restart echelon
 ```
 
 ### Node info
