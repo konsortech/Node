@@ -3,7 +3,7 @@
 sudo systemctl stop 8ball
 
 cp $HOME/.8ball/data/priv_validator_state.json $HOME/.8ball/priv_validator_state.json.backup
-andromedad tendermint unsafe-reset-all --home $HOME/.8ball --keep-addr-book
+8ball tendermint unsafe-reset-all --home $HOME/.8ball --keep-addr-book
 
 SNAP_RPC="https://mainnet-8ball-rpc.konsortech.xyz:443"
 
