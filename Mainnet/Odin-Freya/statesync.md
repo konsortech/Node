@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="5a048cab1d183de5c465c56b29a16fd93a8bf9bd@mainnet-odin.konsortech.xyz:18656"
+peers="c77912fb6f3878650af5d537f9942df7fdac85e1@mainnet-odin.konsortech.xyz:23656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.odin/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
