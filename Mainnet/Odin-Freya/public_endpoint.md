@@ -10,5 +10,5 @@ https://mainnet-odin-api.konsortech.xyz
 
 ### Peers
 ```
-5a048cab1d183de5c465c56b29a16fd93a8bf9bd@mainnet-odin.konsortech.xyz:18656
+c77912fb6f3878650af5d537f9942df7fdac85e1@mainnet-odin.konsortech.xyz:23656
 ```
