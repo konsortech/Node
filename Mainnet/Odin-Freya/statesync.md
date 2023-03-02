@@ -1,6 +1,6 @@
 ## State Sync
 ```
-sudo systemctl stop andromedad
+sudo systemctl stop odind 
 
 cp $HOME/.odin/data/priv_validator_state.json $HOME/.odin/priv_validator_state.json.backup
 andromedad tendermint unsafe-reset-all --home $HOME/.odin --keep-addr-book
@@ -23,6 +23,6 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.odin/conf
 
 mv $HOME/.odin/priv_validator_state.json.backup $HOME/.odin/data/priv_validator_state.json
 
-sudo systemctl restart andromedad
-sudo journalctl -u andromedad -f --no-hostname -o cat
+sudo systemctl restart odind
+sudo journalctl -u odind -f --no-hostname -o cat
 ```
