@@ -82,7 +82,6 @@ max_packet_msg_payload_size = 10240
 flush_throttle_timeout = "50ms"
 mempool.size = 10000
 create_empty_blocks = false
-indexer = "null" [If you are not running explorers using same rpc]
 ```
 
 ## Config pruning
