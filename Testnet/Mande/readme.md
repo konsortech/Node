@@ -12,7 +12,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export MANDE_CHAIN_ID=mande-testnet-1" >> $HOME/.bash_profile
+echo "export MANDE_CHAIN_ID=mande-testnet-2" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -42,9 +42,9 @@ go version
 ## Download and build binaries
 ```
 cd $HOME
-curl -OL https://github.com/mande-labs/testnet-1/raw/main/mande-chaind
-mv mande-chaind /usr/local/bin
-chmod 744 /usr/local/bin/mande-chaind
+wget https://snapshot1.konsortech.xyz/mande/mande-chaind.tar.gz
+tar -xzvf mande-chaind.tar.gz && chmod +x mande-chaind
+mv mande-chaind /usr/local/go/bin/
 ```
 
 ## Init app
@@ -54,15 +54,14 @@ mande-chaind init $NODENAME --chain-id $MANDE_CHAIN_ID
 
 ### Download configuration
 ```
-wget -O $HOME/.mande-chain/config/genesis.json "https://raw.githubusercontent.com/mande-labs/testnet-1/main/genesis.json"
-wget -O $HOME/.mande-chain/config/addrbook.json "https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Mande/addrbook.json"
+wget -O $HOME/.mande-chain/config/genesis.json "https://raw.githubusercontent.com/mande-labs/testnet-2/main/genesis.json"
 ```
 
 ## Set minimum gas price, seeds and peers
 ```
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0mand\"/;" ~/.mande-chain/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.005mand\"/;" ~/.mande-chain/config/app.toml
 sed -i -e "s/^filter_peers *=.*/filter_peers = \"true\"/" $HOME/.mande-chain/config/config.toml
-peers="cd3e4f5b7f5680bbd86a96b38bc122aa46668399@34.171.132.212:26656,6780b2648bd2eb6adca2ca92a03a25b216d4f36b@34.170.16.69:26656,a3e3e20528604b26b792055be84e3fd4de70533b@38.242.199.93:24656"
+peers="dbd1f5b01f010b9e6ae6d9f293d2743b03482db5@34.171.132.212:26656,1d1da5742bdd281f0829124ec60033f374e9ddac@34.170.16.69:26656"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.mande-chain/config/config.toml
 seeds="cd3e4f5b7f5680bbd86a96b38bc122aa46668399@34.171.132.212:26656"
 sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.mande-chain/config/config.toml
@@ -72,13 +71,6 @@ sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.mande-chain/config/confi
 ```
 indexer="null" && \
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.mande-chain/config/config.toml
-```
-
-## Additional node performance config
-
-Increase file limit
-```
-ulimit -n 65536
 ```
 
 Update ~/.mande-chain/config/config.toml
@@ -91,8 +83,6 @@ flush_throttle_timeout = "50ms"
 mempool.size = 10000
 create_empty_blocks = false
 indexer = "null" [If you are not running explorers using same rpc]
-persistent_peers = "ee8a1b98e931e81d32c52f0b489fa22b52778d7c@34.171.132.212:26656,6780b2648bd2eb6adca2ca92a03a25b216d4f36b@34.170.16.69:26656" [Verify]
-Delete ~/.mande-chain/config/addrbook.json [It will be generated freshly]
 ```
 
 ## Config pruning
