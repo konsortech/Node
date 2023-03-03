@@ -75,7 +75,6 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.mande-chain/config/co
 
 Update ~/.mande-chain/config/config.toml
 ```
-log_level = "error"
 send_rate = 20000000
 recv_rate = 20000000
 max_packet_msg_payload_size = 10240
