@@ -1,4 +1,4 @@
-### How To Install Full Node Mande Chain Testnet
+### How To Install Full Node Mande Chain Testnet 2
 
 ## Setting up vars
 Your Nodename (validator) that will shows in explorer
