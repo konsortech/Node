@@ -10,5 +10,5 @@ https://testnet-mande-api.konsortech.xyz
 
 ### Peers
 ```
-640b6d3735239f9b3ad0fbd30e83c985a6addd4f@testnet-mande.konsortech.xyz:26656
+f011505f4eb1490bba56719dda171934b2ca0c9f@testnet-mande.konsortech.xyz:12656
 ```
