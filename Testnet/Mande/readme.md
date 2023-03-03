@@ -47,6 +47,15 @@ tar -xzvf mande-chaind.tar.gz && chmod +x mande-chaind
 mv mande-chaind /usr/local/go/bin/
 ```
 
+## Install Wasm Library
+```
+cd $HOME
+go install  github.com/CosmWasm/wasmvm@v1.0.0
+cd $HOME/go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0/api
+chmod +x libwasmvm.x86_64.so 
+cp -r $HOME/go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0/api/libwasmvm.x86_64.so /usr/lib/
+```
+
 ## Init app
 ```
 mande-chaind init $NODENAME --chain-id $MANDE_CHAIN_ID
