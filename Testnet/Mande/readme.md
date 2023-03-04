@@ -47,13 +47,12 @@ tar -xzvf mande-chaind.tar.gz && chmod +x mande-chaind
 mv mande-chaind /usr/local/go/bin/
 ```
 
-## Install Wasm Library
+## Install Wasm Library ( Skip this, this is only if you got failed to start mande binary libwasmvm.x86_64.so: cannot open shared)
 ```
 cd $HOME
-go install  github.com/CosmWasm/wasmvm@v1.0.0
-cd $HOME/go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0/api
-chmod +x libwasmvm.x86_64.so 
-cp -r $HOME/go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0/api/libwasmvm.x86_64.so /usr/lib/
+wget https://snapshot1.konsortech.xyz/mande/libwasmvm.x86_64.so
+chmod +x libwasmvm.x86_64.so
+mv libwasmvm.x86_64.so /usr/lib/
 ```
 
 ## Init app
