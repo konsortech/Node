@@ -47,7 +47,7 @@ tar -xzvf mande-chaind.tar.gz && chmod +x mande-chaind
 mv mande-chaind /usr/local/go/bin/
 ```
 
-## Install Wasm Library ( Skip this, this is only if you got failed to start mande binary libwasmvm.x86_64.so: cannot open shared)
+## Install Wasm Library (Skip this, this is only if you got failed to start mande binary libwasmvm.x86_64.so: cannot open shared)
 ```
 cd $HOME
 wget https://snapshot1.konsortech.xyz/mande/libwasmvm.x86_64.so
