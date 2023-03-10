@@ -3,7 +3,7 @@
 sudo systemctl stop odind 
 
 cp $HOME/.odin/data/priv_validator_state.json $HOME/.odin/priv_validator_state.json.backup
-andromedad tendermint unsafe-reset-all --home $HOME/.odin --keep-addr-book
+odind tendermint unsafe-reset-all --home $HOME/.odin --keep-addr-book
 
 SNAP_RPC="https://mainnet-odin-rpc.konsortech.xyz:443"
 
