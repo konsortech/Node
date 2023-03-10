@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="54f99960dc7c2a41fb1bda2d2bbf0a627a12d84ef@mainnet-lambda.konsortech.xyz:12656"
+peers="4f99960dc7c2a41fb1bda2d2bbf0a627a12d84ef@mainnet-lambda.konsortech.xyz:12656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.lambdavm/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
