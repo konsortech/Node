@@ -68,11 +68,13 @@ wget -O $HOME/.lumenx/config/genesis.json https://raw.githubusercontent.com/cryp
 ## Set seeds and peers
 ```
 sed -i 's/persistent_peers = \"\"/persistent_peers = \"bc22063df30a0644df742cdb2764b1004df6e3e3@node1.lumenex.io:26656,9cd5f77ac27254891f64801470b0c3432188c62c@node2.lumenex.io:26656,78669849476c8b728abe178475c6f016edf175cf@node3.lumenex.io:26656,48444a4bacc0cafa049d777152473769ab17c0c3@node4.lumenex.io:26656,3d99b79129adeebd237d4153cbba6a749e0ce489@node1.olivestory.co.kr:26656,8246854d88bbba7acec7b4d86c9b418c90816f1f@rpc.lumenx.indonode.net:24656,2c341d570e537683d23102e64e7b73f4bbaef829@65.21.201.244:26766,1d94c81f6b25a51be173d22523f6267113bfcbec@45.134.226.70:26656,39d8e366837505e3a31948d761cc08ac8ed4a44b@188.165.232.199:26666,9a49635f0ecb7ba93fc9eba952cbe58767557010@185.215.180.70:26656,e91a86a4bec23993f584f346208e7b47285eb632@65.21.226.230:27656,3b584334f64ab60f92388ea22bc870dcacf4c157@157.90.179.182:56656,43c4eb952a35df720f2cb4b86a73b43f682d6cb1@37.187.149.93:26696,3c7c6c284806053c21b0e0dbfd3ca59797eab1d7@65.108.7.44:51656,e3989262b8dff3596f3b1d5e44372e9326362552@192.99.4.66:26666,b9aee01d4a878d0cf6beff20cabc9d4659cdd441@65.108.44.100:27656\"/g' $HOME/.lumenx/config/config.toml
-sed -i -e "s|^seeds *=.*|seeds = \"0da8132a62468581db52774e9a513eb032179edd@45.94.58.246:17656\"|" $HOME/.gravity/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"0da8132a62468581db52774e9a513eb032179edd@45.94.58.246:17656\"|" $HOME/.lumenx/config/config.toml
 ```
 
 ## Set Minimum Gas Price
+```
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0025ulumen\"|" $HOME/.lumenx/config/app.toml
+```
 
 
 ## Disable indexing
