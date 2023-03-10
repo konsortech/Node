@@ -80,7 +80,7 @@ sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0025ulumen\"|" $H
 ## Disable indexing
 ```
 indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.lumenxd/config/config.toml
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.lumenx/config/config.toml
 ```
 
 ## Config pruning
