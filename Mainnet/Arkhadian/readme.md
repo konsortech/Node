@@ -4,7 +4,7 @@
 Your Nodename (validator) that will shows in explorer
 ```
 NODENAME=<Your_Nodename_Moniker>
-ARKHADIAN_PORT=18
+ARKHADIAN_PORT=30
 ```
 
 Save variables to system
