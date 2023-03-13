@@ -4,6 +4,7 @@
 Your Nodename (validator) that will shows in explorer
 ```
 NODENAME=<Your_Nodename_Moniker>
+ARKHADIAN_PORT=18
 ```
 
 Save variables to system
@@ -13,6 +14,7 @@ if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
 echo "export ARKHADIAN_CHAIN_ID=arkh" >> $HOME/.bash_profile
+echo "export ARKHADIAN_PORT=${ARKHADIAN_PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
