@@ -54,12 +54,14 @@ sudo mv arkh /usr/bin/
 
 ## Config app
 ```
-arkhd config chain-id $ARKHADIAN_CHAIN_ID
+arkh config chain-id $ARKHADIAN_CHAIN_ID
+arkh config keyring-backend test
+arkh config node tcp://localhost:30657
 ```
 
 ## Init app
 ```
-arkhd  init $NODENAME --chain-id $ARKHADIAN_CHAIN_ID
+arkh  init $NODENAME --chain-id $ARKHADIAN_CHAIN_ID
 ```
 
 ### Download configuration
