@@ -48,7 +48,8 @@ cd $HOME
 git clone https://github.com/vincadian/arkh-blockchain
 cd arkh-blockchain
 git checkout v2.0.0
-make install
+go build -o arkh ./cmd/arkhd
+sudo mv arkh /usr/bin/
 ```
 
 ## Config app
