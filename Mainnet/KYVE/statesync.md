@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="b6a030993f185fe2c224ecdebc379de07fe4d2c1@mainnet-kyved.konsortech.xyz:18656"
+peers="4d1383f7242d2317af3ebbfef56e3879e62d899f@mainnet-kyve.konsortech.xyz:31656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.kyve/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
