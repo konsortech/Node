@@ -74,17 +74,17 @@ journalctl -fu kyved -o cat
 
 Start service
 ```
-sudo systemctl start 8ball
+sudo systemctl start kyved
 ```
 
 Stop service
 ```
-sudo systemctl stop 8ball
+sudo systemctl stop kyved
 ```
 
 Restart service
 ```
-sudo systemctl restart 8ball
+sudo systemctl restart kyved
 ```
 
 ### Node info
@@ -179,4 +179,15 @@ kyved tx slashing unjail \
   --from=$WALLET \
   --chain-id=$KYVE_CHAIN_ID \
   --gas=auto
+```
+### remove node
+```
+sudo systemctl stop kyved
+sudo systemctl disable kyved
+sudo rm /etc/systemd/system/kyve* -rf
+sudo rm $(which kyved) -rf
+sudo rm $HOME/.kyve* -rf
+sudo rm $HOME/chain -rf
+sed -i '/KYVE_/d' ~/.bash_profile
+
 ```
