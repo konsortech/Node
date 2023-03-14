@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="5a048cab1d183de5c465c56b29a16fd93a8bf9bd@mainnet-bitcanna.konsortech.xyz:26656"
+peers="5a048cab1d183de5c465c56b29a16fd93a8bf9bd@mainnet-bitcanna.konsortech.xyz:27656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.bcna/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
