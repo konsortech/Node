@@ -6,7 +6,7 @@
 Your Nodename (validator) that will shows in explorer
 ```
 NODENAME=<Your_Nodename_Moniker>
-KYVE_PORT=18
+KYVE_PORT=31
 ```
 
 Save variables to system
