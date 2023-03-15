@@ -15,7 +15,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export KYVE_CHAIN_ID=eightball-1" >> $HOME/.bash_profile
+echo "export KYVE_CHAIN_ID=kyve-1" >> $HOME/.bash_profile
 echo "export KYVE_PORT=${KYVE_PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
