@@ -64,7 +64,7 @@ nolusd init $NODENAME --chain-id $NOLUS_CHAIN_ID
 ```
 cd $HOME
 curl -s https://raw.githubusercontent.com/Nolus-Protocol/nolus-networks/main/testnet/nolus-rila/genesis.json > $HOME/.nolus/config/genesis.json
-curl -s https://snapshots4-testnet.nodejumper.io/nolus-testnet/addrbook.json > $HOME/.nolus/config/addrbook.json
+curl -s https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Nolus/addrbook.json > $HOME/.nolus/config/addrbook.json
 ```
 
 ## Set seeds and peers
