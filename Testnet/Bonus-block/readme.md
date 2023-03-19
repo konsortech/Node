@@ -72,8 +72,8 @@ bonus-blockd init $NODENAME --chain-id $BONUSBLOCKCHAIN_ID
 ### Download configuration
 ```
 cd $HOME
-curl -Ls https://raw.githubusercontent.com/konsortech/Node/blob/main/Testnet/Bonus-block/addrbook.json > $HOME/.bonusblock/config/genesis.json
-curl -Ls https://raw.githubusercontent.com/konsortech/Node/blob/main/Testnet/Bonus-block/genesis.json > $HOME/.bonusblock/config/addrbook.json
+curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Bonus-block/addrbook.json > $HOME/.bonusblock/config/genesis.json
+curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Bonus-block/genesis.json > $HOME/.bonusblock/config/addrbook.json
 ```
 
 ## Set seeds and peers
