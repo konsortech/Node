@@ -50,6 +50,8 @@ git clone https://github.com/bluzelle/bluzelle-public bluzelle
 cd bluzelle
 git checkout 7bc61cc3ffe0cc90228b10a4db11f678d1db1160
 cd curium
+go build curiumd ./cmd/curiumd/
+sudo mv curiumd /usr/bin/
 ignite chain serve -f -v
 ```
 
