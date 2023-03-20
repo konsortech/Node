@@ -69,7 +69,9 @@ jq -S -c -M '' $HOME/.aura/config/genesis.json | sha256sum
 
 ## Set seeds and peers
 ```
-N/A
+seeds="22a0ca5f64187bb477be1d82166b1e9e184afe50@18.143.52.13:26656,0b8bd8c1b956b441f036e71df3a4d96e85f843b8@13.250.159.219:26656"
+peers="ced3a13f4f7200ce1a2392a5738c88532f794359@mainnet-aura.konsortech.xyz:25656"
+sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.bcna/config/config.toml
 ```
 
 ## Disable indexing
