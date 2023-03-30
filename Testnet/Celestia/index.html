@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Blockspace Race Testnet Transaction Demo</title>
+  </head>
+  <body>
+    <button onclick="submitTransaction()">Submit Transaction</button>
+
+    <script src="https://unpkg.com/@terra-money/terra.js"></script>
+    <script src="https://unpkg.com/@terra-money/use-wallet"></script>
+    <script src="https://unpkg.com/@terra-money/use-station"></script>
+
+    <script>
+      const BLOCKSPACERACE_PARAMS = {
+        chainId: 'blockspacerace',
+        chainName: 'Blockspace Race Testnet',
+        rpc: 'https://rpc-blockspacerace.pops.one',
+        rest: 'https://api-blockspacerace.pops.one',
+      };
+
+      async function submitTransaction() {
+        const namespaceId = '0c204d39600fddd3';
+        const data = 'f1f20ca8007e910a3bf8b2e61da0f26bca07ef78717a6ea54165f5';
+        const gasLimit = 80000;
+        const fee = 2000;
+
+        // Connect to the user's wallet
+        const { connect, availableConnectors } = window.TerraStationWallet;
+        const walletConnect = availableConnectors.find(
+          (connector) => connector.type === "WALLETCONNECT"
+        );
+        await connect(walletConnect);
+
+        // Get the user's account
+        const { address, terraAddress } = await window.useWallet.getAddress();
+
+        // Get the required gas estimate
+        const gasEstimate = await window.Terra.estimateFee({
+          msgs: [],
+          gasPrices: { uusd: 0.15 },
+          gasAdjustment: 1.4,
+          feeDenoms: ["uusd"],
+        });
+
+        // Create the transaction object
+        const tx = {
+          chainID: BLOCKSPACERACE_PARAMS.chainId,
+          msgs: [],
+          fee: {
+            amount: [{ amount: fee.toString(), denom: "uctk" }],
+            gas: gasLimit.toString(),
+          },
+          memo: "Test transaction",
+        };
+
+        // Add the message to the transaction object
+        tx.msgs.push(
+          new window.Terra.wasm.MsgExecuteContract(
+            address,
+            namespaceId,
+            {
+              submit_pfb: {
+                data: data,
+              },
+            },
+            []
+          )
+        );
+
+        // Sign and broadcast the transaction using Keplr
+        try {
+          const response = await window.keplr.signAndBroadcast(
+            terraAddress,
+            [tx],
+            BLOCKSPACERACE_PARAMS.rpc
+          );
+          console.log("Transaction sent:", response);
+        } catch (error) {
+          console.error("Transaction failed:", error);
+        }
+      }
+    </script>
+  </body>
+</html>
