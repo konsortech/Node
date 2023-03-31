@@ -54,7 +54,6 @@ make install
 ## Config app
 ```
 decentrd config chain-id $DECENTR_CHAIN_ID
-decentrd config keyring-backend test
 decentrd config node tcp://localhost:32657
 ```
 ## set custom ports
