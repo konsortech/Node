@@ -5,7 +5,7 @@ sudo systemctl stop realio-networkd
 cp $HOME/.realio-network/data/priv_validator_state.json $HOME/.realio-network/priv_validator_state.json.backup
 realio-networkd tendermint unsafe-reset-all --home $HOME/.realio-network --keep-addr-book
 
-SNAP_RPC="https://testnet-andromeda-rpc.konsortech.xyz:443"
+SNAP_RPC="https://testnet-realio-rpc.konsortech.xyz:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
