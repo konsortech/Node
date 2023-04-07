@@ -117,11 +117,7 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 ```
-## Download snapshot 
-```
--
 
-```
 ## Register and start service
 ```
 sudo systemctl daemon-reload
