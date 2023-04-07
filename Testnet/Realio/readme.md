@@ -1,4 +1,4 @@
-### How To Install Full Node Andromeda Testnet
+### How To Install Full Node Realio Testnet
 
 
 
@@ -73,7 +73,7 @@ realio-networkd init $NODENAME --chain-id $REALIO_CHAIN_ID
 ### Download configuration
 ```
 cd $HOME
-curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Realio/addrbook.json > $HOME/.realio-network/config/genesis.json
+curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Realio/genesis.json > $HOME/.realio-network/config/genesis.json
 curl -Ls https://raw.githubusercontent.com//konsortech/Node/main/Testnet/Realio/addrbook.json > $HOME/.realio-network/config/addrbook.json
 ```
 
