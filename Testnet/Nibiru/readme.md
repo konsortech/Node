@@ -12,7 +12,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export NIBIRU_CHAIN_ID=nibiru-testnet-2" >> $HOME/.bash_profile
+echo "export NIBIRU_CHAIN_ID=nibiru-itn-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
