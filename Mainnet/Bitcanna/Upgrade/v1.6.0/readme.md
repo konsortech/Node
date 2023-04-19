@@ -4,13 +4,13 @@
 ```
 cd $HOME
 wget https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Bitcanna/Upgrade/v1.6.0/v1.6.1.sh
-chmod +x v1.6.1.sh
+chmod +x v2.0.1-rc6.sh
 ```
 
 ## Use Screen
 ```
 screen -S bitcanna-upgrade
-./v1.6.1.sh
+./v2.0.1-rc6.sh
 ```
 
 ## You will see result
