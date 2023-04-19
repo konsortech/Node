@@ -3,7 +3,7 @@
 ## Download script for auto upgrade
 ```
 cd $HOME
-wget https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Bitcanna/Upgrade/v1.6.0/v1.6.1.sh
+wget https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Bitcanna/Upgrade/v2.0.1-rc6.sh
 chmod +x v2.0.1-rc6.sh
 ```
 
