@@ -12,7 +12,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export DEFUND_CHAIN_ID=defund-private-4" >> $HOME/.bash_profile
+echo "export DEFUND_CHAIN_ID=orbit-alpha-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
