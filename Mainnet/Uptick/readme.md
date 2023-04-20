@@ -70,8 +70,8 @@ curl -o $HOME/.uptickd/config/genesis.json https://raw.githubusercontent.com/Upt
 
 ## Set seeds and peers
 ```
-SEEDS='ff97a75fb69d3a5fe893dca7c8d238ccc0bd66a8f@uptick.seed.brocha.in:30600'
-PEERS=''
+SEEDS=''
+PEERS='03d4bd74d72794fefc260008943d48dc502b7518@mainnet-uptick.konsortech.xyz:34656'
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.uptickd/config/config.toml
 ```
 
