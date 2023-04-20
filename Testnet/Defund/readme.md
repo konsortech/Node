@@ -46,7 +46,7 @@ cd $HOME
 rm -rf defund
 git clone https://github.com/defund-labs/defund
 cd defund
-git checkout v0.2.2
+git checkout v0.2.6
 make install
 ```
 
