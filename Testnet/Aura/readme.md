@@ -64,7 +64,7 @@ aurad init $NODENAME --chain-id $AURA_CHAIN_ID
 ```
 cd $HOME
 curl -Ls https://snapshots.kjnodes.com/aura-testnet/genesis.json > $HOME/.aura/config/genesis.json
-wget -O $HOME/.aura/config/addrbook.json wget -O $HOME/.aura/config/addrbook.json
+wget -O $HOME/.aura/config/addrbook.json https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Aura/addrbook.json
 ```
 
 ## Set seeds and peers
