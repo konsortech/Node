@@ -1,3 +1,7 @@
+<p align="center">
+  <img height="200" height="auto" src="https://pbs.twimg.com/profile_images/1569372832269848577/E2MgZxkC_400x400.jpg">
+</p>
+
 ### How To Install Full Node Humans Testnet
 
 ## Setting up vars
