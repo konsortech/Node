@@ -104,3 +104,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable humansd
 sudo systemctl restart humansd && sudo journalctl -u humansd -f -o cat
 ```
+
+### Next Step [Create Validator](https://github.com/konsortech/Node/blob/main/Testnet/Humans/Friction-Testnet/validator.md)
+
