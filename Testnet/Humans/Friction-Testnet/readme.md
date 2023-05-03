@@ -59,7 +59,7 @@ humansd init $NODENAME --chain-id $HUMANS_CHAIN_ID
 
 ### Download configuration
 ```
-wget -O $HOME/.humansd/config/genesis.json "https://raw.githubusercontent.com/humansdotai/testnets/master/friction/genesis-M1-P2.json"
+wget -O $HOME/.humansd/config/genesis.json "https://raw.githubusercontent.com/humansdotai/testnets/master/friction/genesis-M1-P3.json"
 ```
 
 ## Set the minimum gas price and Peers, Filter peers/ MaxPeers
