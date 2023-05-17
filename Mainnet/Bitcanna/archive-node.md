@@ -1,3 +1,11 @@
+## Node Geographical Locations
+
+```
+Country : Indonesia
+Region  : Jawa Barat
+City    : Bekasi
+```
+
 ### RPC
 ```
 https://archive-bitcanna-rpc.konsortech.xyz
