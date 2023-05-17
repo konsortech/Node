@@ -1,4 +1,4 @@
-## Daily Snapshot
+## Daily Snapshot (Every 6 Hours)
 ```
 sudo systemctl stop bcnad
 cp $HOME/.bcna/data/priv_validator_state.json $HOME/.bcna/priv_validator_state.json.backup
