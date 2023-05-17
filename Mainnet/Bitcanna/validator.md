@@ -29,7 +29,7 @@ source $HOME/.bash_profile
 ### Fund your wallet
 In order to create validator first you need to fund your wallet with buy bcna token.
 ```
-[N/A](https://www.bitcanna.io/#Exchanges)
+https://www.bitcanna.io/#Exchanges
 ```
 
 ### Create validator
