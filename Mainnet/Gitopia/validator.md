@@ -41,7 +41,7 @@ gitopiad query bank balances $GITOPIA_WALLET_ADDRESS
 To create your validator run command below
 ```
 gitopiad tx staking create-validator \
-  --amount 1000000utlore \
+  --amount 1000000ulore \
   --from $WALLET \
   --commission-max-change-rate "0.1" \
   --commission-max-rate "0.2" \
@@ -128,7 +128,7 @@ gitopiad query bank balances $GITOPIA_WALLET_ADDRESS
 
 Transfer funds
 ```
-gitopiad tx bank send $GITOPIA_WALLET_ADDRESS <TO_GITOPIA_WALLET_ADDRESS> 1000000utlore
+gitopiad tx bank send $GITOPIA_WALLET_ADDRESS <TO_GITOPIA_WALLET_ADDRESS> 1000000ulore
 ```
 
 ### Voting
@@ -139,12 +139,12 @@ gitopiad tx gov vote 1 yes --from $WALLET --chain-id=$GITOPIA_CHAIN_ID
 ### Staking, Delegation and Rewards
 Delegate stake
 ```
-gitopiad tx staking delegate $GITOPIA_VALOPER_ADDRESS 1000000utlore --from=$WALLET --chain-id=$GITOPIA_CHAIN_ID --gas=auto
+gitopiad tx staking delegate $GITOPIA_VALOPER_ADDRESS 1000000ulore --from=$WALLET --chain-id=$GITOPIA_CHAIN_ID --gas=auto
 ```
 
 Redelegate stake from validator to another validator
 ```
-gitopiad tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 1000000utlore --from=$WALLET --chain-id=$GITOPIA_CHAIN_ID --gas=auto
+gitopiad tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 1000000ulore --from=$WALLET --chain-id=$GITOPIA_CHAIN_ID --gas=auto
 ```
 
 Withdraw all rewards
