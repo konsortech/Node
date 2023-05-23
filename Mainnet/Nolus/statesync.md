@@ -23,6 +23,8 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.nolus/con
 
 mv $HOME/.nolus/priv_validator_state.json.backup $HOME/.nolus/data/priv_validator_state.json
 
+curl -s https://snapshot3.konsortech.xyz/nolus/wasm.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nolus
+
 sudo systemctl restart nolusd
 sudo journalctl -u nolusd -f --no-hostname -o cat
 ```
