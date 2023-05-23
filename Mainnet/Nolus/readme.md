@@ -63,12 +63,13 @@ nolusd init $NODENAME --chain-id $NOLUS_CHAIN_ID
 ```
 cd $HOME
 curl -s https://raw.githubusercontent.com/nolus-protocol/nolus-networks/main/mainnet/pirin-1/genesis.json > $HOME/.nolus/config/genesis.json
+curl -s https://snapshot3.konsortech.xyz/nolus/addrbook.json > $HOME/.nolus/config/addrbook.json
 ```
 
 ## Set seeds and peers
 ```
 SEEDS=""
-PEERS="b84ca6b00682bf80052f0d544872c78614f84d3d@mainnet-nolus:12656"
+PEERS="b84ca6b00682bf80052f0d544872c78614f84d3d@mainnet-nolus.konsortech.xyz:12656"
 sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.nolus/config/config.toml
 ```
 
