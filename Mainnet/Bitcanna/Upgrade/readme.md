@@ -3,14 +3,14 @@
 ## Download script for auto upgrade
 ```
 cd $HOME
-wget https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Bitcanna/Upgrade/v2.0.1-rc6.sh
-chmod +x v2.0.1-rc6.sh
+wget https://raw.githubusercontent.com/konsortech/Node/main/Mainnet/Bitcanna/Upgrade/v1.7.0.sh
+chmod +x v1.7.0.sh
 ```
 
 ## Use Screen
 ```
 screen -S bitcanna-upgrade
-./v2.0.1-rc6.sh
+./v1.7.0.sh
 ```
 
 ## You will see result
