@@ -42,7 +42,7 @@ go version
 ## Download and build binaries
 ```
 cd $HOME
-wget https://snapshot1.konsortech.xyz/mande/mande-chaind.tar.gz
+wget https://snapshot3.konsortech.xyz/mande/mande-chaind.tar.gz
 tar -xzvf mande-chaind.tar.gz && chmod +x mande-chaind
 mv mande-chaind /usr/local/go/bin/
 ```
@@ -50,7 +50,7 @@ mv mande-chaind /usr/local/go/bin/
 ## Install Wasm Library (Skip this, this is only if you got failed to start mande binary libwasmvm.x86_64.so: cannot open shared)
 ```
 cd $HOME
-wget https://snapshot1.konsortech.xyz/mande/libwasmvm.x86_64.so
+wget https://snapshot3.konsortech.xyz/mande/libwasmvm.x86_64.so
 chmod +x libwasmvm.x86_64.so
 mv libwasmvm.x86_64.so /usr/lib/
 ```
