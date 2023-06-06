@@ -50,7 +50,7 @@ make install
 
 ## Config app
 ```
-banksyd init NODE_NAME --chain-id banksy-testnet-3
+banksyd config chain-id $COMPOSABLE_CHAIN_ID
 ```
 
 ## Init app
