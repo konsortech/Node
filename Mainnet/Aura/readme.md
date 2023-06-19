@@ -43,7 +43,7 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-git clone --branch aura_v0.4.4 https://github.com/aura-nw/aura
+git clone --branch aura_v0.4.5 https://github.com/aura-nw/aura
 cd aura && make
 ```
 
