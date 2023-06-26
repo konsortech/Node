@@ -3,6 +3,11 @@
 https://testnet-blockx-rpc.konsortech.xyz
 ```
 
+### EVM
+```
+https://testnet-blockx-evm.konsortech.xyz
+```
+
 ### API
 ```
 https://testnet-blockx-api.konsortech.xyz
