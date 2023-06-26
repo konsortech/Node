@@ -3,7 +3,7 @@
 https://testnet-blockx-rpc.konsortech.xyz
 ```
 
-### EVM
+### EVM RPC
 ```
 https://testnet-blockx-evm.konsortech.xyz
 ```
