@@ -12,7 +12,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export TIMPI_CHAIN_ID=blockx_12345-2" >> $HOME/.bash_profile
+echo "export BLOCKX_CHAIN_ID=blockx_12345-2" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
