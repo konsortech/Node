@@ -1,3 +1,5 @@
+## State Sync
+```
 sudo systemctl stop empowerd
 
 cp $HOME/.empowerchain/data/priv_validator_state.json $HOME/.empowerchain/priv_validator_state.json.backup
@@ -23,3 +25,4 @@ mv $HOME/.empowerchain/priv_validator_state.json.backup $HOME/.empowerchain/data
 
 sudo systemctl restart empowerd
 sudo journalctl -u empowerd -f --no-hostname -o cat
+```
