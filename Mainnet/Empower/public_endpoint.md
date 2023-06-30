@@ -15,5 +15,5 @@ http://mainnet-empower.konsortech.xyz:27090
 
 ### Peers
 ```
-c4277e884bbbf33ef1d8f13cbf26adb3b12336fd@mainnet-empower.konsortech.xyz:27656
+60b046f36fe485fb40cb8ece99e14244141de3cc@mainnet-empower.konsortech.xyz:27656
 ```
