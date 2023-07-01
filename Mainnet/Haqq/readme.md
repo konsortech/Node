@@ -1,4 +1,4 @@
-### How To Install Full Node haqqd MAINNET
+### How To Install Full Node haqqd Mainnet
 
 
 
