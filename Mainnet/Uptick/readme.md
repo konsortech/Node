@@ -49,7 +49,7 @@ fi
 cd $HOME
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
-git checkout v0.2.4
+git checkout v0.2.8
 make install
 ```
 
