@@ -43,8 +43,8 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-git clone https://github.com/munblockchain/mun
-cd mun
+git clone https://github.com/munblockchain/mun-node
+cd mun-node
 make install
 ```
 
