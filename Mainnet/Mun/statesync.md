@@ -1,3 +1,6 @@
+## Statesync
+
+```
 sudo systemctl stop mund
 
 cp $HOME/.mun/data/priv_validator_state.json $HOME/.mun/priv_validator_state.json.backup
@@ -20,3 +23,4 @@ mv $HOME/.mun/priv_validator_state.json.backup $HOME/.mun/data/priv_validator_st
 
 sudo systemctl restart mund
 sudo journalctl -u mund -f --no-hostname -o cat
+```
