@@ -62,13 +62,13 @@ blockxd init $NODENAME --chain-id $BLOCKX_CHAIN_ID
 ### Download configuration
 ```
 cd $HOME
-curl -Ls https://raw.githubusercontent.com/defi-ventures/blockx-node-public-compiled/main/genesis.json > $HOME/.blockxd/config/genesis.json
+curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Blockx/genesis.json > $HOME/.blockxd/config/genesis.json
+curl -Ls https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Blockx/addrbook.json > $HOME/.blockxd/config/addrbook.json
 ```
 
 ## Set seeds and peers
 ```
-peers="4a7401f7d6daa39d331196d8cc179a4dcb11b5f9@143.198.110.221:26656,49a5a62543f5fec60db42b00d9ebe192c3185e15@143.198.97.96:26656,dccf886659c4afcb0cd4895ccd9f2804c7e7e1cd@143.198.101.61:26656"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.blockxd/config/config.toml
+sed -i 's/seeds = \"\"/seeds = \"3bdc1c076399ee1090b1b7efa0474ce1a1cb191a@146.190.153.165:26656,49a5a62543f5fec60db42b00d9ebe192c3185e15@146.190.157.123:26656\"/g' $HOME/.blockxd/config/config.toml
 ```
 
 ## Disable indexing
