@@ -15,5 +15,5 @@ https://testnet-blockx-api.konsortech.xyz
 
 ### Peers
 ```
-abb1c4e4025a762ebccd4019f352153b11cc97b6@testnet-blockx.konsortech.xyz:29656
+f0f63a19eb749e368cb02a541b7ef53689d8a1f9@testnet-blockx.konsortech.xyz:18656
 ```
