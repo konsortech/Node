@@ -12,7 +12,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export BLOCKX_CHAIN_ID=blockx_12345-2" >> $HOME/.bash_profile
+echo "export BLOCKX_CHAIN_ID=blockx_50-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -43,20 +43,20 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-wget https://github.com/defi-ventures/blockx-node-public-compiled/releases/download/v9.0.0/blockxd
+curl -LO https://github.com/defi-ventures/BCX-atlantis-testnet-2-node-compiled/releases/download/assets/blockxd
 chmod +x blockxd
 mv blockxd $HOME/go/bin/blockxd
 ```
 
 ## Config app
 ```
-blockxd config chain-id $TIMPI_CHAIN_ID
+blockxd config chain-id $BLOCKX_CHAIN_ID
 blockxd config keyring-backend test
 ```
 
 ## Init app
 ```
-blockxd init $NODENAME --chain-id $TIMPI_CHAIN_ID
+blockxd init $NODENAME --chain-id $BLOCKX_CHAIN_ID
 ```
 
 ### Download configuration
