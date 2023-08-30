@@ -62,7 +62,7 @@ pointd init $NODENAME --chain-id $POINT_CHAIN_ID
 ### Download configuration
 ```
 wget -O $HOME/.pointd/config/genesis.json "https://raw.githubusercontent.com/pointnetwork/point-chain-config/main/mainnet-1/genesis.json"
-wget -O $HOME/.pointd/config/config.toml https://raw.githubusercontent.com/pointnetwork/point-chain-config/main/mainnet-1/config.toml
+wget -O $HOME/.pointd/config/config.toml "https://raw.githubusercontent.com/pointnetwork/point-chain-config/main/mainnet-1/config.toml"
 ```
 
 ## Set seeds and peers
