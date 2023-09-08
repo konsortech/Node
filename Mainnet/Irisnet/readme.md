@@ -45,7 +45,7 @@ fi
 cd $HOME
 git clone https://github.com/irisnet/irishub
 cd irishub
-git checkout v1.4.1
+git checkout v2.0.3
 make install
 ```
 
