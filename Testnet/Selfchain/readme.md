@@ -43,9 +43,9 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-mkdir -p /roo/go/bin
+mkdir -p /root/go/bin
 wget https://snapshot3.konsortech.xyz/selfchain/selfchaind
-chmod +x selchaind
+chmod +x selfchaind
 mv selfchaind /root/go/bin
 ```
 
