@@ -60,7 +60,7 @@ arkeod tx staking create-validator \
 
 ### Check your validator key
 ```
-[[ $(arkeod q staking validator $SELF_VALOPER_ADDRESS -oj | jq -r .consensus_pubkey.key) = $(arkeod status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
+[[ $(arkeod q staking validator $ARKEO_VALOPER_ADDRESS -oj | jq -r .consensus_pubkey.key) = $(arkeod status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
 ```
 
 ### Get list of validators
@@ -129,17 +129,17 @@ arkeod keys delete $WALLET
 
 Get wallet balance
 ```
-arkeod query bank balances $SELF_WALLET_ADDRESS
+arkeod query bank balances $ARKEO_WALLET_ADDRESS
 ```
 
 Transfer funds
 ```
-arkeod tx bank send $SELF_WALLET_ADDRESS <TO_SELF_WALLET_ADDRESS> 1000000000uself
+arkeod tx bank send $ARKEO_WALLET_ADDRESS <TO_ARKEO_WALLET_ADDRESS> 1000000uarkeo
 ```
 
 ### Voting
 ```
-arkeod tx gov vote 1 yes --from $WALLET --chain-id=$SELF_CHAIN_ID
+arkeod tx gov vote 1 yes --from $WALLET --chain-id=$ARKEO_CHAIN_ID
 ```
 
 ### Staking, Delegation and Rewards
