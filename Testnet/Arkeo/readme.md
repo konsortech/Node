@@ -1,4 +1,4 @@
-### How To Install Full Node Areko Testnet
+### How To Install Full Node Arkeo Testnet
 
 ## Setting up vars
 Your Nodename (validator) that will shows in explorer
