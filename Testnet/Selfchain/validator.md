@@ -50,7 +50,7 @@ selfchaind tx staking create-validator \
   --pubkey  $(selfchaind tendermint show-validator) \
   --moniker $NODENAME \
   --chain-id $SELF_CHAIN_ID
-  --gas-prices==0.1uself \
+  --gas-prices=0.1uself \
   --gas-adjustment=1.5 \
   --gas=auto \
 ```
