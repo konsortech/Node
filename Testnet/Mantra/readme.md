@@ -1,4 +1,4 @@
-### How To Install Full Node Mantra CHain Testnet
+### How To Install Full Node Mantra Chain Testnet
 
 ## Setting up vars
 Your Nodename (validator) that will shows in explorer
