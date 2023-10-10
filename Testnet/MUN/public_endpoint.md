@@ -15,7 +15,7 @@ https://testnet-mun-api.konsortech.xyz
 
 ### Address Book
 ```
-https://snapshot3.konsortech.xyz/mun/addrbook.json
+https://snapshot3.konsortech.xyz/mun-testnet/addrbook.json
 ```
 
 ### Custom Explorer
