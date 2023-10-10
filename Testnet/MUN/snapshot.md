@@ -1,4 +1,4 @@
-## Daily Snapshot
+## Snapshot
 ```
 sudo systemctl stop mund
 cp $HOME/.mun/data/priv_validator_state.json $HOME/.mun/priv_validator_state.json.backup
