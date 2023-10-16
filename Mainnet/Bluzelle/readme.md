@@ -28,7 +28,7 @@ sudo apt install curl build-essential git wget jq make gcc tmux net-tools ccze -
 
 ## Install go
 ```
-ver="1.17"
+ver="1.18"
 cd $HOME
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
 sudo rm -rf /usr/local/go
@@ -48,10 +48,8 @@ curl https://get.ignite.com/cli! | bash
 cd $HOME
 git clone https://github.com/bluzelle/bluzelle-public bluzelle
 cd bluzelle
-git checkout 7bc61cc3ffe0cc90228b10a4db11f678d1db1160
+git checkout bluzelle-9
 cd curium
-go build curiumd ./cmd/curiumd/
-sudo mv curiumd /usr/bin/
 ignite chain serve -f -v
 ```
 
@@ -67,8 +65,8 @@ curiumd init $NODENAME --chain-id $BLUZELLE_CHAIN_ID
 
 ### Download configuration
 ```
-curl https://bluzelle-rpc.genznodes.dev/genesis | jq -r '.result.genesis' > genesis.json
-mv -r genesis.json .curium/config/genesis.json
+wget -O $HOME/.curium/config/genesis.json https://snapshot3.konsortech.xyz/bluzelle/genesis.json
+wget -O $HOME/.curium/config/addrbook.json https://snapshot3.konsortech.xyz/bluzelle/addrbook.json
 ```
 
 ## Set seeds and peers
