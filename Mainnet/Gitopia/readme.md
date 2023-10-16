@@ -43,8 +43,8 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-wget https://github.com/gitopia/gitopia/releases/download/v2.0.0/gitopiad_2.0.0_linux_amd64.tar.gz
-tar -xzvf gitopiad_2.0.0_linux_amd64.tar.gz
+wget https://server.gitopia.com/releases/Gitopia/gitopia/v3.3.0/gitopiad_3.3.0_linux_amd64.tar.gz
+tar -xzvf gitopiad_3.3.0_linux_amd64.tar.gz
 mv gitopiad /root/go/bin/gitopiad
 ```
 
