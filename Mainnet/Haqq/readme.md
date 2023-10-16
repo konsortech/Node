@@ -47,7 +47,7 @@ fi
 cd $HOME
 git clone https://github.com/haqq-network/haqq.git
 cd haqq
-git checkout v1.4.0
+git checkout v1.6.0
 make install
 ```
 
@@ -64,7 +64,7 @@ haqqd init $NODENAME --chain-id $HAQQ_CHAIN_ID
 ### Download configuration
 ```
 cd $HOME
-curl -Ls https://snapshots.nodestake.top/haqq/genesis.json > $HOME/.haqqd/config/genesis.json
+curl -Ls https://snapshot3.konsortech.xyz/haqq/genesis.json > $HOME/.haqqd/config/genesis.json
 ```
 
 ## Set seeds and peers
