@@ -17,7 +17,7 @@ https://mainnet-haqq-api.konsortech.xyz
 
 ### gRPC
 ```
-https://mainnet-haqq-grpc.konsortech.xyz
+mainnet-haqq-grpc.konsortech.xyz:11090
 ```
 
 ### Peers
