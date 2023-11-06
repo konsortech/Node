@@ -41,7 +41,7 @@ uptickd query bank balances $UPTICK_WALLET_ADDRESS
 To create your validator run command below
 ```
 uptickd tx staking create-validator \
-  --amount 5000000000000000000auptick \
+  --amount 5000000000000000000auoc \
   --from $WALLET \
   --commission-max-change-rate "0.01" \
   --commission-max-rate "0.2" \
@@ -128,7 +128,7 @@ uptickd query bank balances $UPTICK_WALLET_ADDRESS
 
 Transfer funds
 ```
-uptickd tx bank send $UPTICK_WALLET_ADDRESS <TO_UPTICK_WALLET_ADDRESS> 5000000000000000000auptick
+uptickd tx bank send $UPTICK_WALLET_ADDRESS <TO_UPTICK_WALLET_ADDRESS> 5000000000000000000auoc
 ```
 
 ### Voting
@@ -139,12 +139,12 @@ uptickd tx gov vote 1 yes --from $WALLET --chain-id=$UPTICK_CHAIN_ID
 ### Staking, Delegation and Rewards
 Delegate stake
 ```
-uptickd tx staking delegate $UPTICK_VALOPER_ADDRESS 5000000000000000000auptick --from=$WALLET --chain-id=$UPTICK_CHAIN_ID --gas=auto
+uptickd tx staking delegate $UPTICK_VALOPER_ADDRESS 5000000000000000000auoc --from=$WALLET --chain-id=$UPTICK_CHAIN_ID --gas=auto
 ```
 
 Redelegate stake from validator to another validator
 ```
-uptickd tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 5000000000000000000auptick --from=$WALLET --chain-id=$UPTICK_CHAIN_ID --gas=auto
+uptickd tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 5000000000000000000auoc --from=$WALLET --chain-id=$UPTICK_CHAIN_ID --gas=auto
 ```
 
 Withdraw all rewards
