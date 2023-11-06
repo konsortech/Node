@@ -3,14 +3,19 @@
 https://testnet-uptick-rpc.konsortech.xyz
 ```
 
+### API
+```
+https://testnet-uptick-api.konsortech.xyz
+```
+
 ### Json RPC EVM
 ```
 https://testnet-uptick-evm.konsortech.xyz
 ```
 
-### API
+### gRPC
 ```
-https://testnet-uptick-api.konsortech.xyz
+testnet-uptick.konsortech.xyz:34090
 ```
 
 ### Peers
