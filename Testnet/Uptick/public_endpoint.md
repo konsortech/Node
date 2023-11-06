@@ -3,6 +3,11 @@
 https://testnet-uptick-rpc.konsortech.xyz
 ```
 
+### Json RPC EVM
+```
+https://testnet-uptick-evm.konsortech.xyz
+```
+
 ### API
 ```
 https://testnet-uptick-api.konsortech.xyz
