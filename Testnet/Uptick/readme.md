@@ -16,7 +16,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export UPTICK_CHAIN_ID=uptick_7000-2" >> $HOME/.bash_profile
+echo "export UPTICK_CHAIN_ID=origin_1170-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -47,10 +47,9 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-git clone https://github.com/UptickNetwork/uptick.git
-cd uptick
-git checkout v0.2.4
-make install
+wget https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/origin_1170-1/lib/uptickd-linux-amd64-v0.2.13.tar.gz
+tar -zxvf uptickd-linux-amd64-v0.2.13.tar.gz && chmod +x uptickd
+mv uptickd /root/go/bin/uptickd
 ```
 
 ## Config app
@@ -66,13 +65,13 @@ uptickd init $NODENAME --chain-id $UPTICK_CHAIN_ID
 
 ### Download configuration
 ```
-curl -o $HOME/.uptickd/config/genesis.json https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-2/genesis.json
-curl -o $HOME/.uptickd/config/addrbook.json https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Uptick/addrbook.json
+curl -o $HOME/.uptickd/config/genesis.json https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/origin_1170-1/config/genesis.json
+curl -Ls https://ss-t.uptick.nodestake.top/addrbook.json > $HOME/.uptickd/config/addrbook.json
 ```
 
 ## Set seeds and peers
 ```
-SEEDS='f97a75fb69d3a5fe893dca7c8d238ccc0bd66a8f@uptick-seed.p2p.brocha.in:30554'
+SEEDS=''
 PEERS=''
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.uptickd/config/config.toml
 ```
@@ -88,7 +87,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.uptickd/config/config
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
-pruning_interval="50"
+pruning_interval="10"
 sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.uptickd/config/app.toml
 sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.uptickd/config/app.toml
 sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.uptickd/config/app.toml
@@ -97,7 +96,7 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 ## Set minimum gas price
 ```
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0auptick\"/" $HOME/.uptickd/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0auoc\"/" $HOME/.uptickd/config/app.toml
 ```
 
 ## Create service
