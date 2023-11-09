@@ -43,7 +43,7 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-wget https://github.com/MANTRA-Finance/public/raw/main/mantrachain-testnet/mantrachaind-linux-amd64.zip
+wget https://snapshot3.konsortech.xyz/mantra-testnet/mantrachaind-linux-amd64.zip
 unzip mantrachaind-linux-amd64.zip
 rm mantrachaind-linux-amd64.zip
 mv mantrachaind $HOME/go/bin/
