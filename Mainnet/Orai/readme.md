@@ -47,10 +47,9 @@ fi
 ```
 cd $HOME && rm -rf orai
 git clone https://github.com/oraichain/orai.git && cd orai
-git checkout v0.41.2
-go get ./...
-make build VERSION=0.41.2
-sudo mv ./build/oraid /root/go/bin
+git checkout v0.41.4
+cd orai/orai
+make install
 ```
 
 ## Config app
