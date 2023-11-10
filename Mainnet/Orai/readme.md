@@ -54,7 +54,7 @@ make install
 
 ## Config app
 ```
-oraid init $NODENAME --chain-id $ORAI_CHAIN_ID --home "$HOME/root/.oraid"
+oraid init $NODENAME --chain-id $ORAI_CHAIN_ID --home "$HOME/.oraid"
 
 ```
 ## set custom ports
