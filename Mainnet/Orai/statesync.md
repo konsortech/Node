@@ -5,7 +5,7 @@ sudo systemctl stop oraid
 cp $HOME/.oraid/data/priv_validator_state.json $HOME/.oraid/priv_validator_state.json.backup
 oraid tendermint unsafe-reset-all --home $HOME/.oraid --keep-addr-book
 
-SNAP_RPC="https://mainnet-oraid-rpc.konsortech.xyz:443"
+SNAP_RPC="https://mainnet-orai-rpc.konsortech.xyz:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
