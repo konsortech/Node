@@ -1,3 +1,5 @@
+## Public Endpoint
+
 ### RPC
 ```
 https://mainnet-uptick-rpc.konsortech.xyz
