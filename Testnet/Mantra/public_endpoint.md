@@ -1,3 +1,5 @@
+## Public Endpoints
+
 ### RPC
 ```
 https://testnet-mantra-rpc.konsortech.xyz
