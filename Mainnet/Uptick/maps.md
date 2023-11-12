@@ -1,6 +1,6 @@
 ## Uptick Decentralization Maps
 
 ```
-[HTML Page](https://maps-uptick.konsortech.xyz/)
+[Decentralization Maps](https://your-netlify-site.netlify.app)
 ```
 
