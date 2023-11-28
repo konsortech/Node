@@ -1,5 +1,3 @@
 ## Uptick Decentralization Maps
 
-[Decentralization Maps](https://maps-uptick.konsortech.xyz)
-
-
+[Decentralization Maps](https://maps.konsortech.xyz/mainnet/uptick)
