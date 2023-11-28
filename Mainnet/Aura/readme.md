@@ -43,8 +43,8 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-git clone --branch aura_v0.4.5 https://github.com/aura-nw/aura
-cd aura && make
+wget https://github.com/aura-nw/aura/releases/download/v0.7.1/aurad
+chmod +x aurad && mv aurad /root/go/bin/
 ```
 
 ## Config app
@@ -85,7 +85,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.aura/config/config.to
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
-pruning_interval="50"
+pruning_interval="10"
 sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.aura/config/app.toml
 sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.aura/config/app.toml
 sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.aura/config/app.toml
