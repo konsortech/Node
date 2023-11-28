@@ -45,7 +45,7 @@ fi
 cd $HOME
 git clone https://github.com/aura-nw/aura.git
 cd aura
-git checkout euphoria_v0.4.2
+git checkout v0.7.2-euphoria
 make install
 ```
 
@@ -63,13 +63,12 @@ aurad init $NODENAME --chain-id $AURA_CHAIN_ID
 ### Download configuration
 ```
 cd $HOME
-curl -Ls https://snapshots.kjnodes.com/aura-testnet/genesis.json > $HOME/.aura/config/genesis.json
-wget -O $HOME/.aura/config/addrbook.json https://raw.githubusercontent.com/konsortech/Node/main/Testnet/Aura/addrbook.json
+wget -c https://github.com/aura-nw/testnets/raw/main/euphoria-2/euphoria-2-genesis.tar.gz -O - | tar -xz -C $HOME/.aura/config
 ```
 
 ## Set seeds and peers
 ```
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@aura-testnet.rpc.kjnodes.com:17659\"|" $HOME/.aura/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"705e3c2b2b554586976ed88bb27f68e4c4176a33@52.76.203.126:26656\"|" $HOME/.aura/config/config.toml
 ```
 
 ## Disable indexing
@@ -83,7 +82,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.aura/config/config.to
 pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
-pruning_interval="50"
+pruning_interval="10"
 sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.aura/config/app.toml
 sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.aura/config/app.toml
 sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.aura/config/app.toml
