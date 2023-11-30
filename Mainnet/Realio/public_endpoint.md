@@ -13,5 +13,5 @@ https://testnet-realio-evm.konsortech.xyz
 ```
 ### Peers
 ```
-271f194229b4ee9be89777daa3ef8201553865cc@mainnet-realio.konsortech.xyz:36656
+47658297fefcdfb095cea3d2455e66b5892f4899@mainnet-realio.konsortech.xyz:33656
 ```
