@@ -10,5 +10,5 @@ https://testnet-aura-api.konsortech.xyz
 
 ### Peers
 ```
-31f11907b83ab12d86910ad0c9217ca62a5b8d5d@testnet-aura.konsortech.xyz:26656
+d707e400ed48ce71952d3634f4052fc647898351@testnet-aura.konsortech.xyz:20656
 ```
