@@ -48,7 +48,7 @@ cd $HOME
 rm -rf realio-network/
 git clone https://github.com/realiotech/realio-network.git
 cd realio-network/
-git checkout v0.8.0-rc4
+git checkout v0.8.3
 make install
 ```
 
