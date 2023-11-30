@@ -107,7 +107,7 @@ near login
 ```
 target/release/neard init --chain-id="mainnet" --account-id=<full_pool_id>
 ```
-**Note that if you want to download blocks faster just stop command after initialization and go further by guide.
+> Note that if you want to download blocks faster just stop command after initialization and go further by guide.
 
 * Download the latest genesis and config, if config already exist just delete it and download a new one:
 ```
