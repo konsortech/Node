@@ -101,7 +101,7 @@ near login
 4 – Enter your wallet and press Enter
 
 <img width="1018" alt="image" src="https://user-images.githubusercontent.com/108992739/217499436-6be18b9d-8835-406b-a500-b88fa675eaec.png">
-#### Step 4 – Initialize & Start the Node
+### Step 4 – Initialize & Start the Node
 * From nearcore folder initialize NEAR:
 ```
 target/release/neard init --chain-id="mainnet" --account-id=<full_pool_id>
