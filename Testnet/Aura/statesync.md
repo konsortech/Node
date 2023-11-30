@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="31f11907b83ab12d86910ad0c9217ca62a5b8d5d@testnet-aura.konsortech.xyz:26656"
+peers="d707e400ed48ce71952d3634f4052fc647898351@testnet-aura.konsortech.xyz:20656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.aura/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
