@@ -90,7 +90,7 @@ sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0usge\"|" $HOME/.sg
 
 ## Create service
 ```
-ssudo tee /etc/systemd/system/sged.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/sged.service > /dev/null <<EOF
 [Unit]
 Description=sged Daemon
 After=network-online.target
