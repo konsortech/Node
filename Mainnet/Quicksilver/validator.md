@@ -28,9 +28,9 @@ source $HOME/.bash_profile
 
 ### Fund your wallet
 In order to create validator first you need to fund your wallet with discord faucet.
-```
+
 Buy on [Osmosis](https://app.osmosis.zone/?from=QCK&to=USDC.axl)
-```
+---
 
 ### Create validator
 
