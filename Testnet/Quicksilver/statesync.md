@@ -22,3 +22,4 @@ mv $HOME/.quicksilverd/priv_validator_state.json.backup $HOME/.quicksilverd/data
 
 sudo systemctl restart quicksilverd
 sudo journalctl -u quicksilverd -f --no-hostname -o cat
+```
