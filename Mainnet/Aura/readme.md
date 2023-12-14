@@ -43,7 +43,7 @@ fi
 ## Download and build binaries
 ```
 cd $HOME
-wget https://github.com/aura-nw/aura/releases/download/v0.7.1/aurad
+wget https://github.com/aura-nw/aura/releases/download/v0.7.2/aurad
 chmod +x aurad && mv aurad /root/go/bin/
 ```
 
