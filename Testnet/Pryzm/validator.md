@@ -28,9 +28,8 @@ source $HOME/.bash_profile
 
 ### Fund your wallet
 In order to create validator first you need to fund your wallet with discord faucet.
-```
-[faucet](https://testnet.pryzm.zone/faucet)
-```
+> [faucet](https://testnet.pryzm.zone/faucet)
+
 
 ### Create validator
 
