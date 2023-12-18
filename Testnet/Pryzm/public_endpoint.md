@@ -17,5 +17,5 @@ testnet-pryzm.konsortech.xyz:40090
 
 ### Peers
 ```
-c02b2b2d60a48bd3ea17b426a7b3efde6e5bdf0a@testnet-pryzm.konsortech.xyz:40657
+c35f39ee848989dffc52a0e71d523ec09ebad755@testnet-pryzm.konsortech.xyz:35657
 ```
