@@ -12,7 +12,7 @@ https://testnet-pryzm-api.konsortech.xyz
 
 ### gRPC
 ```
-testnet-pryzm.konsortech.xyz:40090
+testnet-pryzm.konsortech.xyz:35090
 ```
 
 ### Peers
