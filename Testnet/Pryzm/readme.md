@@ -93,7 +93,7 @@ sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.015upryzm\"|" $HO
 ```
 sudo tee /etc/systemd/system/pryzmd.service > /dev/null <<EOF
 [Unit]
-Description=Quicksilver Node
+Description=Pryzm Node
 After=network-online.target
 
 [Service]
