@@ -76,3 +76,8 @@ docker logs -f pryzm-feeder
 [2023-12-21T10:32:28.176Z] icStakingPlugin info: plugin started
 [2023-12-21T10:32:28.188Z] TelemetryServer info: ⚡️ express server is running at port: 2121
 ```
+
+## Shutdown Pricefeeder
+```
+docker compose down
+```
