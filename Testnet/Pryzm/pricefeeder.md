@@ -51,6 +51,11 @@ ls $HOME/pricefeeder
 fund your pricefeeder wallet address with faucet
 > [Pryzm Faucet](https://testnet.pryzm.zone/faucet)
 
+## Use the consent tx and link your validator address and feeder address together
+```
+pryzmd tx oracle delegate-feed-consent [feeder-address] --fees 2000factory/pryzm15k9s9p0ar0cx27nayrgk6vmhyec3lj7vkry7rx/uusdsim,3000upryzm --from your-validator-wallet-address
+```
+
 ## Run your Pricefeeder
 ```
 docker compose up -d
