@@ -66,12 +66,6 @@ curl -Ls https://snapshot3.konsortech.xyz/pryzm-testnet/genesis.json > $HOME/.pr
 curl -Ls https://snapshot3.konsortech.xyz/pryzm-testnet/addrbook.json > $HOME/.pryzm/config/addrbook.json
 ```
 
-## Disable indexing
-```
-indexer="null"
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.pryzm/config/config.toml
-```
-
 ## Config pruning
 ```
 pruning="custom"
