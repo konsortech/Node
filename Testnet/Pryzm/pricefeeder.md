@@ -12,7 +12,8 @@ Followed this Link
 ## Download Your Pricefeeder resource
 
 ```
-mkdir -p $HOME/pricefeeder
+cd $HOME
+mkdir -p $HOME/pricefeeder $$ cd pricefeeder
 
 wget https://storage.googleapis.com/pryzm-zone/feeder/config.yaml
 wget https://storage.googleapis.com/pryzm-zone/feeder/init.sql
