@@ -24,9 +24,13 @@ wget https://storage.googleapis.com/pryzm-zone/feeder/docker-compose.yml
 docker pull europe-docker.pkg.dev/pryzm-zone/core/pryzm-feeder:0.3.4
 docker pull timescale/timescaledb:2.13.0-pg16
 ```
+## Create New Wallet For Przym Pricefeeder
+Save your price feeder wallet address and save mnemonic
+```
+pryzmd keys add pricefeeder
+```
 
 ## Edit your config.yml
-
 ```
 nano config.yml
 ```
