@@ -24,5 +24,5 @@ c57cb8c929a73edff5cbad63a90d923edcf96913@testnet-hypersign.konsortech.xyz:27656
 
 ### Seeds
 ```
-0c482d4a01da30643c4d5c5406a3c5d4f3bf84e7@testnet-seed.konsortech.xyz:27165
+38a7acd6c1befd16d26bc6f627e9e75f5c1aa488@testnet-seed.konsortech.xyz:27165
 ```
