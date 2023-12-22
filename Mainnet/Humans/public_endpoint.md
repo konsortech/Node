@@ -7,7 +7,10 @@ https://mainnet-humans-rpc.konsortech.xyz
 
 ### EVM RPC
 ```
-https://mainnet-humans-evm.konsortech.xyz
+Network Name    : Humans Mainnet
+RPC URL         : https://mainnet-humans-evm.konsortech.xyz
+Chain ID        : 1089
+Curreny Symbol  : HEART
 ```
 
 ### API
