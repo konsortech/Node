@@ -20,6 +20,7 @@ https://mainnet-humans-api.konsortech.xyz
 mainnet-humans.konsortech.xyz:40090
 ```
 
+
 ## Peers and Seeds
 
 ### Peers
@@ -30,4 +31,16 @@ mainnet-humans.konsortech.xyz:40090
 ### Seeds
 ```
 6408a62a32415dcf1c863cef7fcae987bad23b7c@mainnet-seed.konsortech.xyz:40165
+```
+
+## Genesis & Address Book
+
+### Address Book
+```
+https://snapshot3.konsortech.xyz/humans/addrbook.json
+```
+
+# Genesis
+```
+https://snapshot3.konsortech.xyz/humans/genesis.json
 ```
