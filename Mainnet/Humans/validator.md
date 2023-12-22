@@ -1,4 +1,4 @@
-Guidence for create validator
+## Guidence for create validator
 
 ### Create wallet
 To create new wallet you can use command below. Don’t forget to save the mnemonic
