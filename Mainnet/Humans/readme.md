@@ -59,7 +59,7 @@ wget https://raw.githubusercontent.com/humansdotai/mainnets/main/mainnet/1/genes
 
 ## Set the minimum gas price and Peers, Filter peers/ MaxPeers
 ```
-SEEDS="f8006da7d742777eeca0194b94586c8f147be4f6@humans-mainnet-seed.itrocket.net:17656,babc3f3f7804933265ec9c40ad94f4da8e9e0017@seed.rhinostake.com:18456"
+SEEDS="6408a62a32415dcf1c863cef7fcae987bad23b7c@mainnet-seed.konsortech.xyz:40165"
 PEERS=""
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.humans/config/config.toml
 sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0aheart\"/;" ~/.humans/config/app.toml
