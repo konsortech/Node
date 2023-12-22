@@ -31,3 +31,15 @@ testnet-humans.konsortech.xyz:40090
 ```
 4475f4c5939ae6705bd1eb0e4783cbdc2b0889e0@testnet-seed.konsortech.xyz:13165
 ```
+
+## Genesis & Address Book
+
+### Address Book
+```
+https://snapshot.konsortech.xyz/humans/addrbook.json
+```
+
+### Genesis
+```
+https://snapshot.konsortech.xyz/humans/genesis.json
+```
