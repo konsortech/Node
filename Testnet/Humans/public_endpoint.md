@@ -7,7 +7,10 @@ https://testnet-humans-rpc.konsortech.xyz
 
 ### EVM RPC
 ```
-https://testnet-humans-evm.konsortech.xyz
+Network Name    : Humans Testnet
+RPC URL         : https://testnet-humans-evm.konsortech.xyz
+Chain ID        : 3000
+Curreny Symbol  : HEART
 ```
 
 ### API
