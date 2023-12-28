@@ -23,6 +23,10 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.aura/conf
 
 mv $HOME/.aura/priv_validator_state.json.backup $HOME/.aura/data/priv_validator_state.json
 
+rm -r $HOME/.aura/wasm
+curl -L https://snapshot.konsortech.xyz/aura/wasm.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.aura
+
+
 sudo systemctl restart aurad
 sudo journalctl -u aurad -f --no-hostname -o cat
 ```
