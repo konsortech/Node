@@ -26,3 +26,11 @@ mainnet-quicksilver.konsortech.xyz:46090
 ```
 61e601946a69bf667f41d67a3515da0cf8950516@mainnet-seed.konsortech.xyz:46165
 ```
+
+## Genesis and Addrbook
+```
+curl -Ls https://snapshot3.konsortech.xyz/quicksilver/genesis.json > $HOME/.quicksilverd/config/genesis.json
+curl -Ls https://snapshot3.konsortech.xyz/quicksilver/addrbook.json > $HOME/.quicksilverd/config/addrbook.json
+```
+
+
