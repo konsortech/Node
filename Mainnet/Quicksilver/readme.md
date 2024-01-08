@@ -69,7 +69,7 @@ curl -Ls https://snapshot2.konsortech.xyz/quicksilver/addrbook.json > $HOME/.qui
 
 ## Set seeds and peers
 ```
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@quicksilver.rpc.kjnodes.com:11159\"|" $HOME/.quicksilverd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"61e601946a69bf667f41d67a3515da0cf8950516@mainnet-seed.konsortech.xyz:46165\"|" $HOME/.quicksilverd/config/config.toml
 ```
 
 ## Disable indexing
