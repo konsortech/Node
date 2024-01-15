@@ -103,7 +103,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which blockxd) start start --home /root/.blockxd
+ExecStart=$(which blockxd) start --home /root/.blockxd
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
