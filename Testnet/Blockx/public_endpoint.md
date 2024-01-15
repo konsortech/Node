@@ -27,7 +27,7 @@ testnet-blockx.konsortech.xyz:18656
 
 ### Peers
 ```
-f0f63a19eb749e368cb02a541b7ef53689d8a1f9@testnet-blockx.konsortech.xyz:18656
+f0f63a19eb749e368cb02a541b7ef53689d8a1f9@testnet-blockx.konsortech.xyz:38656
 ```
 
 ### Seeds
