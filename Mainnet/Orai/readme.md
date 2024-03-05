@@ -45,7 +45,7 @@ fi
 ```
 cd $HOME && rm -rf orai
 git clone https://github.com/oraichain/orai.git && cd orai
-git checkout v0.41.4
+git checkout v0.41.6
 cd orai/orai
 make install
 ```
