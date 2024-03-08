@@ -1,4 +1,4 @@
-### How To Install Full Node Aura Network Testnet
+### How To Install Full Node Aura Network Mainnet
 
 ## Setting up vars
 Your Nodename (validator) that will shows in explorer
