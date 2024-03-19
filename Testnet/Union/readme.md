@@ -50,6 +50,7 @@ sudo mv uniond /root/go/bin
 
 ## Config app
 ```
+alias uniond='uniond --home=$HOME/.union/'
 uniond config chain-id $UNION_CHAIN_ID
 ```
 
