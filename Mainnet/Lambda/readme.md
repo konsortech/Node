@@ -45,6 +45,7 @@ fi
 cd $HOME
 git clone https://github.com/LambdaIM/lambdavm.git
 cd lambdavm
+git checkout v1.0.1
 make install
 ```
 
