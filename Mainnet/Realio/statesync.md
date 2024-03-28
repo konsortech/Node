@@ -13,7 +13,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="47658297fefcdfb095cea3d2455e66b5892f4899@mainnet-realio.konsortech.xyz:33656"
+peers="d1c9b8fbde1f717f6525f9f3759ae379cf3e02c5@mainnet-realio.konsortech.xyz:34656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.realio-network/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
