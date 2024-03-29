@@ -27,12 +27,12 @@ nano /etc/systemd/system/oraid.service
 For Non Cosmovisor Services
 ```
 [Unit]
-Description=Orai Network Node
+Description=Orai Node
 After=network.target
 [Service]
 Type=simple
-User=root
-ExecStart=/root/go/bin/oraid start --home /root/.oraid
+User=USER
+ExecStart=/home/USER/go/bin/oraid start --home /home/USER/.oraid
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -63,8 +63,13 @@ Environment="LD_LIBRARY_PATH=/usr/local/lib"
 WantedBy=multi-user.target
 ```
 
-### Start Oraichain Services
+### Reload Deamon Services
 ```
 sudo systemctl daemon-reload
+```
+
+
+### Start Oraichain Services
+```
 sudo service oraid restart && journalctl -fu oraid -o cat
 ```
