@@ -24,6 +24,7 @@ sudo service oraid stop
 
 nano /etc/systemd/system/oraid.service 
 
+For Non Cosmovisor Services
 ```
 [Unit]
 Description=Orai Network Node
@@ -35,6 +36,28 @@ ExecStart=/root/go/bin/oraid start --home /root/.oraid
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
+Environment="LD_LIBRARY_PATH=/usr/local/lib"
+[Install]
+WantedBy=multi-user.target
+```
+
+For Cosmovisor Services
+```
+[Unit]
+Description="orai node"
+After=network-online.target
+
+[Service]
+User=USER
+ExecStart=/home/USER/go/bin/cosmovisor run start --home /home/USER/.oraid
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+Environment="DAEMON_NAME=oraid"
+Environment="DAEMON_HOME=/home/USER/.oraid"
+Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
+Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
+Environment="UNSAFE_SKIP_BACKUP=true"
 Environment="LD_LIBRARY_PATH=/usr/local/lib"
 [Install]
 WantedBy=multi-user.target
