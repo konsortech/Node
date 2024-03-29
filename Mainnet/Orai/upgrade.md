@@ -42,6 +42,6 @@ WantedBy=multi-user.target
 
 ### Start Oraichain Services
 ```
-sudo systemctl daemon-relaod
+sudo systemctl daemon-reload
 sudo service oraid restart && journalctl -fu oraid -o cat
 ```
