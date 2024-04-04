@@ -46,7 +46,7 @@ cd $HOME
 git clone https://github.com/planq-network/planq.git
 cd planq
 git fetch
-git checkout v1.0.7
+git checkout v1.1.0
 make install
 ```
 
@@ -63,7 +63,7 @@ planqd init $NODENAME --chain-id $PLANQ_CHAIN_ID
 ### Download configuration
 ```
 wget -qO $HOME/.planqd/config/genesis.json "https://snapshot3.konsortech.xyz/planq/genesis.json"
-wget -O $HOME/.planqd/config/addrbook.json "https://snapshot3.konsortech.xyz/planq/genesis.json"
+wget -O $HOME/.planqd/config/addrbook.json "https://snapshot3.konsortech.xyz/planq/addrbook.json"
 ```
 
 ## Set seeds and peers
