@@ -12,7 +12,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export MANTRA_CHAIN_ID=mantrachain-testnet-1" >> $HOME/.bash_profile
+echo "export MANTRA_CHAIN_ID=mantra-hongbai-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -47,7 +47,7 @@ wget https://snapshot3.konsortech.xyz/mantra-testnet/mantrachaind-linux-amd64.zi
 unzip mantrachaind-linux-amd64.zip
 rm mantrachaind-linux-amd64.zip
 mv mantrachaind $HOME/go/bin/
-sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/releases/download/v1.3.0/libwasmvm.x86_64.so
+sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/releases/download/v1.3.1/libwasmvm.x86_64.so
 mantrachaind version
 ```
 
@@ -64,8 +64,8 @@ mantrachaind init $NODENAME --chain-id $MANTRA_CHAIN_ID
 ### Download configuration
 ```
 cd $HOME
-curl -Ls https://snapshot3.konsortech.xyz/mantra-testnet/genesis.json > $HOME/.mantrachain/config/genesis.json
-curl -Ls https://snapshot3.konsortech.xyz/mantra-testnet/addrbook.json > $HOME/.mantrachain/config/addrbook.json
+curl -Ls https://snapshot.konsortech.xyz/mantra-testnet/genesis.json > $HOME/.mantrachain/config/genesis.json
+curl -Ls https://snapshot.konsortech.xyz/mantra-testnet/addrbook.json > $HOME/.mantrachain/config/addrbook.json
 ```
 
 ## Disable indexing
@@ -83,7 +83,7 @@ sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.mantrachain/c
 
 ## Set minimum gas price
 ```
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.00uaum"|g' $HOME/.mantrachain/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0002uom"|g' $HOME/.mantrachain/config/app.toml
 ```
 
 ## Create service
