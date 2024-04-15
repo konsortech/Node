@@ -17,7 +17,7 @@ testnet-mantra.konsortech.xyz:32090
 
 ### Persistence Peers
 ```
-3661e9bfa8afc84515a098685f16c6af4f4d978a@testnet-mantra-konsortech.xyz:32656
+f8352e2f7d9e6f71a431a77cefe9a84bcab3bbac@testnet-mantra-konsortech.xyz:32656
 ```
 
 ### Seeds
