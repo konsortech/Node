@@ -29,7 +29,7 @@ source $HOME/.bash_profile
 ### Fund your wallet
 Faucet available on website
 ```
-https://faucet.testnet.mantrachain.io/
+https://faucet.hongbai.mantrachain.io/
 ```
 
 ### Create validator
@@ -41,7 +41,7 @@ mantrachaind query bank balances $MANTRA_WALLET_ADDRESS
 To create your validator run command below
 ```
 mantrachaind tx staking create-validator \
-  --amount 10000000uaum \
+  --amount 10000000uom \
   --from $WALLET \
   --commission-max-change-rate "0.01" \
   --commission-max-rate "0.2" \
@@ -50,8 +50,8 @@ mantrachaind tx staking create-validator \
   --pubkey $(mantrachaind tendermint show-validator) \
   --moniker $NODENAME \
   --chain-id $MANTRA_CHAIN_ID
-  --gas-adjustment 1.4 \
-  --gas=auto 
+  --gas="auto" \
+  --gas-adjustment 2 
 ```
 
 ### Check your validator key
@@ -130,7 +130,7 @@ mantrachaind query bank balances $MANTRA_WALLET_ADDRESS
 
 Transfer funds
 ```
-mantrachaind tx bank send $MANTRA_WALLET_ADDRESS <TO_MANTRA_WALLET_ADDRESS> 10000000uaum
+mantrachaind tx bank send $MANTRA_WALLET_ADDRESS <TO_MANTRA_WALLET_ADDRESS> 10000000uom
 ```
 
 ### Voting
@@ -141,12 +141,12 @@ mantrachaind tx gov vote 1 yes --from $WALLET --chain-id=$MANTRA_CHAIN_ID
 ### Staking, Delegation and Rewards
 Delegate stake
 ```
-mantrachaind tx staking delegate $MANTRA_VALOPER_ADDRESS 10000000uaum --from=$WALLET --chain-id=$MANTRA_CHAIN_ID --gas=auto
+mantrachaind tx staking delegate $MANTRA_VALOPER_ADDRESS 10000000uom --from=$WALLET --chain-id=$MANTRA_CHAIN_ID --gas=auto
 ```
 
 Redelegate stake from validator to another validator
 ```
-mantrachaind tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 10000000uaum --from=$WALLET --chain-id=$MANTRA_CHAIN_ID --gas=auto
+mantrachaind tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 10000000uom --from=$WALLET --chain-id=$MANTRA_CHAIN_ID --gas=auto
 ```
 
 Withdraw all rewards
