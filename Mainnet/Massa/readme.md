@@ -69,9 +69,7 @@ wallet_add_secret_keys <input_your_private_key_wallet>
 node_start_staking <your_public_wallet_address>
 ```
 
-
 ### Buy Rolls
 ```
 buy_rolls <your_public_wallet_address> 1 0
 ```
-``
