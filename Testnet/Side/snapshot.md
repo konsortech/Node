@@ -1,4 +1,4 @@
-## Daily Snapshot (Every 6 Hours)
+## Snapshots
 ```
 sudo systemctl stop sided
 cp $HOME/.side/data/priv_validator_state.json $HOME/.side/priv_validator_state.json.backup
