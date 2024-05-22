@@ -7,17 +7,17 @@ https://testnet-airchains-rpc.konsortech.xyz
 
 ### API
 ```
-https://testnet-airchain-api.konsortech.xyz
+https://testnet-airchains-api.konsortech.xyz
 ```
 
 ### gRPC
 ```
-testnet-airchain.konsortech.xyz:24090
+testnet-airchains.konsortech.xyz:24090
 ```
 
 ### Persistence Peers
 ```
-fa66d9933c74918be38948f9027239663ad8bca6@testnet-airchain.konsortech.xyz:24656
+fa66d9933c74918be38948f9027239663ad8bca6@testnet-airchains.konsortech.xyz:24656
 ```
 
 ### Seeds
