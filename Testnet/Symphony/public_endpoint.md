@@ -22,7 +22,7 @@ testnet-symphony.konsortech.xyz:14090
 
 ### Seeds
 ```
-@mainnet-seed.konsortech.xyz:
+e1226a94284458871eeece1631061b97209151bf@testnet-seed.konsortech.xyz:22165
 ```
 
 ### Mirroring Genesis
