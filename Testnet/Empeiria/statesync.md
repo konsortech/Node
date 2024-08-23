@@ -14,7 +14,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-peers="@testnet-empeiria.konsortech.xyz:"
+peers="70d0d06e3542ef3c43bb76052ead755d456fbe81@testnet-empeiria.konsortech.xyz:16657"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.empe-chain/config/config.toml
 
 sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
