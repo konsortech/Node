@@ -17,7 +17,7 @@ testnet-empeiria.konsortech.xyz:14090
 
 ### Persistence Peers
 ```
-@testnet-empeiria.konsortech.xyz:
+70d0d06e3542ef3c43bb76052ead755d456fbe81@testnet-empeiria.konsortech.xyz:
 ```
 
 ### Seeds
