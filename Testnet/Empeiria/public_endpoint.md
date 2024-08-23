@@ -22,7 +22,7 @@ testnet-empeiria.konsortech.xyz:16090
 
 ### Seeds
 ```
-@testnet-seed.konsortech.xyz:
+32df95054cae287d742ed3d8ec433a633d6582ec@testnet-seed.konsortech.xyz:17165
 ```
 
 ### Mirroring Genesis
