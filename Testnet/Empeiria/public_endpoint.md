@@ -12,12 +12,12 @@ https://testnet-empeiria-api.konsortech.xyz
 
 ### gRPC
 ```
-testnet-empeiria.konsortech.xyz:14090
+testnet-empeiria.konsortech.xyz:16090
 ```
 
 ### Persistence Peers
 ```
-70d0d06e3542ef3c43bb76052ead755d456fbe81@testnet-empeiria.konsortech.xyz:
+70d0d06e3542ef3c43bb76052ead755d456fbe81@testnet-empeiria.konsortech.xyz:16657
 ```
 
 ### Seeds
