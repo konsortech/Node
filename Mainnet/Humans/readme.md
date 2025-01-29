@@ -1,4 +1,4 @@
-### How To Install Full Node Humans Testnet
+### How To Install Full Node Humans Mainnet
 
 ## Setting up vars
 Your Nodename (validator) that will shows in explorer
