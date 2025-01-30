@@ -62,8 +62,8 @@ wget https://snap1.konsortech.xyz/atomone/addrbook.json -O $HOME/.atomone/config
 
 ## Set the minimum gas price and Peers, Filter peers/ MaxPeers
 ```
-SEEDS=""
-PEERS=""
+SEEDS="eab84253445cd82e843b9cbfbb311020ae045c26@mainnet-seed.konsortech.xyz:13165"
+PEERS="13745b16a6e037d9282c7d77980f05f20c4cbd41@mainnet-atomone.konsortech.xyz:12656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.atomone/config/config.toml
 sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0001uatone\"/;" ~/.atomone/config/app.toml
 sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.atomone/config/config.toml
