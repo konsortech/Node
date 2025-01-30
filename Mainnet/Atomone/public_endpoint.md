@@ -25,7 +25,7 @@ mainnet-atomone.konsortech.xyz:12090
 
 ### Seeds
 ```
-@mainnet-seed.konsortech.xyz:
+eab84253445cd82e843b9cbfbb311020ae045c26@mainnet-seed.konsortech.xyz:13165
 ```
 
 ## Genesis & Address Book
