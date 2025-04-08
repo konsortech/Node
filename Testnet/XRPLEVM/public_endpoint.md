@@ -27,7 +27,7 @@ d09fbf1e3e6572a780bc50f21c21aede10f9fd5c@testnet-xrpl.konsortech.xyz:16656
 
 ### Seeds
 ```
-@testnet-seed.konsortech.xyz:
+574dc3559318dd5b89ff53594e27ed68964c65fa@testnet-seed.konsortech.xyz:16165
 ```
 
 ### Mirroring Genesis
