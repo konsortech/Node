@@ -47,7 +47,7 @@ fi
 cd $HOME
 git clone https://github.com/haqq-network/haqq.git
 cd haqq
-git checkout v1.6.0
+git checkout v1.8.5
 make install
 ```
 
@@ -64,13 +64,14 @@ haqqd init $NODENAME --chain-id $HAQQ_CHAIN_ID
 ### Download configuration
 ```
 cd $HOME
-curl -Ls https://snapshot3.konsortech.xyz/haqq/genesis.json > $HOME/.haqqd/config/genesis.json
+curl -o ~/.haqqd/config/genesis.json https://snapshot.konsortech.xyz/mainnet/haqq/genesis.json
+curl -o ~/.haqqd/config/addrbook.toml https://snapshot.konsortech.xyz/mainnet/haqq/addrbook.json
 ```
 
 ## Set seeds and peers
 ```
-SEEDS=""
-PEERS="83d80ab596c2b3a026b1f37ce3bd8310778f8c57@5.78.57.135:26656,9578a7c58cd91724c639aaf2ff5a01a35ce6e705@34.91.100.34:26656,9295e4898f83139726f3c5dd87d73efcd328e8f2@148.113.143.171:26656,ecb2274dbef5350270d3e21175b31746350cdc37@34.141.202.93:26656,977238095690cbbc57e2299f737c4258e0547cbd@34.107.55.236:26656,4e1c2471efb89239fb04a4b75f9f87177fd91d00@134.65.195.37:26656,fb0b8dfc6d81be517e8150f532c5d5ef09e5c898@34.88.105.219:26656,e345b6d6db937518aca00afb91c9e63e55b4fac1@135.181.183.212:26656,97e4468ac589eac505a800411c635b14511a61bb@169.155.46.251:26656,e04d814cf820c498e64153c27b021be1a70b6f6b@65.109.33.48:25656,4dddc284c0aa3373b3f73da95e989a607f37ee26@35.204.156.167:26656"
+SEEDS="c839460bb2eac533e7e402f03065728df98f4e01@mainnet-seed.konsortech.xyz:11165"
+PEERS="28498a11b7e3bdf7e63fb6c57b07cfcbe89d6a20@mainnet-haqq.konsortech.xyz:21656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.haqqd/config/config.toml
 ```
 
